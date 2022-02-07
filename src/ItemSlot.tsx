@@ -34,11 +34,11 @@ function mapRankToColor(rank: number) {
   if (rank === 0) {
     return "white";
   }
-  if (rank < 3) {
-    return "yellow";
-  }
   if (rank === -1) {
     return "red";
+  }
+  if (rank < 3) {
+    return "yellow";
   }
   return "white";
 }
