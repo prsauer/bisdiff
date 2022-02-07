@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { getProfile } from "./web-api";
 
 import "./App.css";
-import { EquipmentInfo } from "./EquipmentInfo";
 
 import cdata from "./json/composed.json";
 
@@ -13,6 +12,7 @@ import {
   EquippedItemsCharacter,
 } from "./api-types";
 import { getEquippedItemsByPlayer } from "./web-api";
+import { ItemSlot } from "./ItemSlot";
 
 const compositeData = cdata as unknown as {
   specId: string;
@@ -60,16 +60,6 @@ async function findProfile(armorySearch: string) {
   } catch {
     return "An error occurred";
   }
-}
-
-function morphItem(i?: EquippedItem) {
-  if (!i) return undefined;
-  return {
-    id: `${i.item.id}`,
-    bonuses: i.bonus_list?.map((b) => `${b}`) || [],
-    enchants: i.enchantments?.map((e) => `${e.enchantment_id}`) || [],
-    gems: i.sockets?.filter((s) => s.item).map((s) => `${s.item.id}`) || [],
-  };
 }
 
 function App() {
@@ -160,54 +150,7 @@ function App() {
         }}
       >
         {itemData.map((b) => (
-          <div
-            key={b.slotType}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "flex-start",
-              marginBottom: 25,
-              marginRight: 25,
-              padding: 4,
-              borderStyle: "solid",
-              borderWidth: 1,
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "flex-start",
-              }}
-            >
-              SLOT {b.slotType}{" "}
-              <EquipmentInfo
-                item={morphItem(
-                  targetData.find((i) => i.slot.type === b.slotType)
-                )}
-                size={"small"}
-                notext
-              />
-            </div>
-
-            {b.histo.map((a) => (
-              <div
-                key={a.item.item.id}
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                }}
-              >
-                {targetData.find((ti) => `${ti.item.id}` === a.id) && (
-                  <div>Current - </div>
-                )}
-                <EquipmentInfo notext item={morphItem(a.item)} size={"small"} />
-                {a.percent.toFixed(1)}%
-              </div>
-            ))}
-          </div>
+          <ItemSlot {...b} targetData={targetData} />
         ))}
       </div>
     </div>
