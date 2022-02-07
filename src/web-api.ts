@@ -1,6 +1,6 @@
 import { CharacterProfile, EquippedItemsCharacter } from "./api-types";
 
-const api_root = "us.api.blizzard.com";
+const api_root = "gentle-hamlet-01818.herokuapp.com";
 const access_token = "zxcv";
 
 export function sleep(ms: number) {
@@ -13,12 +13,12 @@ export async function getProfile(
 ): Promise<CharacterProfile | undefined> {
   try {
     let res = await fetch(
-      `https://${api_root}/profile/wow/character/${realm}/${name}?namespace=profile-us&locale=en_US&access_token=${access_token}`
+      `https://${api_root}/profile/wow/character/${realm}/${name}?namespace=profile-us&locale=en_US`
     );
     if (res.status !== 200) {
       await sleep(1000);
       res = await fetch(
-        `https://${api_root}/profile/wow/character/${realm}/${name}?namespace=profile-us&locale=en_US&access_token=${access_token}`
+        `https://${api_root}/profile/wow/character/${realm}/${name}?namespace=profile-us&locale=en_US`
       );
     }
     return res.json() as Promise<CharacterProfile>;
@@ -33,12 +33,12 @@ export async function getEquippedItemsByPlayer(
 ): Promise<EquippedItemsCharacter | undefined> {
   try {
     let res = await fetch(
-      `https://${api_root}/profile/wow/character/${realm}/${name}/equipment?namespace=profile-us&locale=en_US&access_token=${access_token}`
+      `https://${api_root}/profile/wow/character/${realm}/${name}/equipment?namespace=profile-us&locale=en_US`
     );
     if (res.status !== 200) {
       await sleep(1000);
       res = await fetch(
-        `https://${api_root}/profile/wow/character/${realm}/${name}/equipment?namespace=profile-us&locale=en_US&access_token=${access_token}`
+        `https://${api_root}/profile/wow/character/${realm}/${name}/equipment?namespace=profile-us&locale=en_US`
       );
     }
     return res.json() as Promise<EquippedItemsCharacter>;
