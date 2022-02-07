@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - yarn
+      - yarn build
+    finally:
+      - echo This always runs even if the install command fails
+
+artifacts:
+  files:
+    - "**/*"
+  base-directory: "build"
