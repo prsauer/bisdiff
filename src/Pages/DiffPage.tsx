@@ -172,6 +172,7 @@ export function DiffPage() {
           flexDirection: "row",
           flexWrap: "wrap",
           margin: 25,
+          maxWidth: 800,
         }}
       >
         {itemData.map((b) => (

@@ -1,4 +1,3 @@
-import exp from "constants";
 import { useState } from "react";
 import { TappableText } from "../design/TappableText";
 import { EquippedItem } from "../proxy/api-types";
@@ -81,6 +80,7 @@ export function ItemSlot(props: ItemSlotProps) {
         borderWidth: 1,
         backgroundColor: mapRankToColor(bestMatch),
         opacity: bestMatch === 0 ? 0.75 : 1.0,
+        minWidth: 120,
       }}
     >
       <div
@@ -88,7 +88,7 @@ export function ItemSlot(props: ItemSlotProps) {
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
-          justifyContent: "flex-start",
+          justifyContent: "center",
         }}
       >
         <SlotTitle
