@@ -80,6 +80,7 @@ export function ItemSlot(props: ItemSlotProps) {
         borderStyle: "solid",
         borderWidth: 1,
         backgroundColor: mapRankToColor(bestMatch),
+        opacity: bestMatch === 0 ? 0.75 : 1.0,
       }}
     >
       <div
