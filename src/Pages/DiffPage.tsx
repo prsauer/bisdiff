@@ -20,7 +20,7 @@ const compositeData = cdata as unknown as {
       id: string;
       count: number;
       percent: number;
-      item: any;
+      item: EquippedItem;
     }[];
     slotType: string;
   }[];
@@ -90,7 +90,7 @@ export function DiffPage() {
         id: string;
         count: number;
         percent: number;
-        item: any;
+        item: EquippedItem;
       }[];
       slotType: string;
     }[]
@@ -165,6 +165,11 @@ export function DiffPage() {
           text={"compare"}
         />
       </div>
+      <div style={{ marginTop: 12 }}>
+        Compares your equipped items to the top 5k pvp players, filtered for
+        your spec.
+      </div>
+
       {profileError && <div>An error occurred</div>}
       <div
         style={{
@@ -178,6 +183,10 @@ export function DiffPage() {
         {itemData.map((b) => (
           <ItemSlot key={b.slotType} {...b} targetData={targetData} />
         ))}
+      </div>
+      <div style={{ marginTop: 12 }}>
+        Known issues: Trinkets/rings aren't compared well due to having 2
+        equipped
       </div>
     </PageContainer>
   );

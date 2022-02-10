@@ -27,6 +27,12 @@ export type LeaderboardResult = {
   entries: LeaderboardCharacter[];
 };
 
+export enum MatchQuality {
+  "GREEN",
+  "YELLOW",
+  "RED",
+}
+
 export type EquippedItem = {
   name: string;
   slot: {
@@ -45,6 +51,9 @@ export type EquippedItem = {
       id: number;
     };
   }[];
+  level: {
+    value: number;
+  };
 };
 export type EquippedItemsCharacter = {
   character: CharacterPartial;
