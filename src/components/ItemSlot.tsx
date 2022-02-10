@@ -1,4 +1,7 @@
-import { EquippedItem } from "./api-types";
+import exp from "constants";
+import { useState } from "react";
+import { TappableText } from "../design/TappableText";
+import { EquippedItem } from "../proxy/api-types";
 import { EquipmentInfo } from "./EquipmentInfo";
 
 interface ItemSlotProps {
@@ -26,27 +29,43 @@ function CurrentMarker({ i, children }: { i: number; children: any }) {
   return <div style={{ fontSize: 14 }}>{children}</div>;
 }
 
-function SlotTitle({ slotType, rank }: { slotType: string; rank: number }) {
-  return <div style={{ fontSize: 14 }}>{slotType}</div>;
+function SlotTitle({
+  slotType,
+  rank,
+  onClick,
+}: {
+  slotType: string;
+  rank: number;
+  onClick?: () => void;
+}) {
+  return (
+    <TappableText onClick={onClick} style={{ fontSize: 14 }} text={slotType} />
+  );
 }
 
 function mapRankToColor(rank: number) {
   if (rank === 0) {
-    return "white";
+    return "black";
   }
   if (rank === -1) {
-    return "red";
+    return "#7c1010";
   }
   if (rank < 3) {
-    return "yellow";
+    return "#6c5300";
   }
-  return "white";
+  return "#7c1010";
 }
 
 export function ItemSlot(props: ItemSlotProps) {
+  const [expanded, setExpanded] = useState(false);
   const bestMatch = props.histo.findIndex((a) =>
     props.targetData.map((i) => `${i.item.id}`).includes(a.id)
   );
+
+  const histoToShow = expanded ? props.histo : props.histo.slice(0, 3);
+  if (!expanded && bestMatch > 2) {
+    histoToShow[2] = props.histo[bestMatch];
+  }
 
   return (
     <div
@@ -71,7 +90,11 @@ export function ItemSlot(props: ItemSlotProps) {
           justifyContent: "flex-start",
         }}
       >
-        <SlotTitle slotType={props.slotType} rank={bestMatch} />
+        <SlotTitle
+          slotType={props.slotType}
+          rank={bestMatch}
+          onClick={() => setExpanded(!expanded)}
+        />
         <EquipmentInfo
           item={morphItem(
             props.targetData.find((i) => i.slot.type === props.slotType)
@@ -81,7 +104,7 @@ export function ItemSlot(props: ItemSlotProps) {
         />
       </div>
 
-      {props.histo.map((a, idx) => {
+      {histoToShow.map((a, idx) => {
         return (
           <div
             key={a.item.item.id}

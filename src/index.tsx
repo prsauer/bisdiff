@@ -1,12 +1,78 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { Outlet, BrowserRouter, Routes, Route } from "react-router-dom";
+import { CookiesProvider } from "react-cookie";
+import { DiffPage } from "./Pages/DiffPage";
+import { ThemeProvider, useTheme } from "styled-components";
+import { CustomThemeType, darkTheme } from "./design/theme";
+
+const queryClient = new QueryClient();
+
+function Layout() {
+  const theme: CustomThemeType = useTheme() as CustomThemeType;
+  return (
+    <div
+      style={{
+        backgroundColor: theme.Root.backgroundColor,
+        padding: 12,
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        flex: 1,
+        color: theme.Default.color,
+      }}
+    >
+      <div
+        style={{
+          marginLeft: -12,
+          marginTop: -12,
+          color: theme.Title.color,
+          fontSize: "1.1em",
+          fontWeight: "lighter",
+        }}
+      >
+        ~/wow/stats/data/vis
+      </div>
+      <main style={{ flexGrow: 1 }}>
+        <Outlet />
+      </main>
+      <footer style={{ color: theme.Footer.color }}>
+        <a
+          rel="noreferrer"
+          target="_blank"
+          href="https://www.patreon.com/armsperson"
+        >
+          patreon.com/armsperson
+        </a>
+      </footer>
+    </div>
+  );
+}
+
+function CookieThemeMiddle() {
+  return (
+    <ThemeProvider theme={darkTheme}>
+      <QueryClientProvider client={queryClient}>
+        <BrowserRouter basename={"spires.io"}>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<DiffPage />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </QueryClientProvider>
+    </ThemeProvider>
+  );
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <CookiesProvider>
+      <CookieThemeMiddle />
+    </CookiesProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

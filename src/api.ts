@@ -3,7 +3,7 @@ import {
   CharacterProfile,
   EquippedItemsCharacter,
   LeaderboardResult,
-} from "./api-types";
+} from "./proxy/api-types";
 
 const api_root = "us.api.blizzard.com";
 const access_token = "zxcv";

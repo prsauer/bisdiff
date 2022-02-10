@@ -8,7 +8,7 @@ import {
   EquippedItemsCharacter,
   LeaderboardCharacter,
   LeaderboardResult,
-} from "./api-types";
+} from "./proxy/api-types";
 
 const slotTypes = [
   "HEAD",
