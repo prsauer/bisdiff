@@ -56,7 +56,7 @@ function CookieThemeMiddle() {
   return (
     <ThemeProvider theme={darkTheme}>
       <QueryClientProvider client={queryClient}>
-        <BrowserRouter basename={"spires.io"}>
+        <BrowserRouter>
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<DiffPage />} />
