@@ -42,19 +42,6 @@ function SlotTitle({
   );
 }
 
-function mapRankToColor(rank: number) {
-  if (rank === 0) {
-    return "black";
-  }
-  if (rank === -1) {
-    return "#7c1010";
-  }
-  if (rank < 3) {
-    return "#6c5300";
-  }
-  return "#7c1010";
-}
-
 export function ItemSlot(props: ItemSlotProps) {
   const [expanded, setExpanded] = useState(false);
   const bestMatch = props.histo.findIndex((a) =>
@@ -99,19 +86,6 @@ export function ItemSlot(props: ItemSlotProps) {
     [MatchQuality.GREEN]: "black",
     [MatchQuality.YELLOW]: "#6c5300",
   };
-
-  function mapRankToColor(rank: number) {
-    if (rank === 0) {
-      return "black";
-    }
-    if (rank === -1) {
-      return "#7c1010";
-    }
-    if (rank < 3) {
-      return "#6c5300";
-    }
-    return "#7c1010";
-  }
 
   const histoToShow = expanded ? props.histo : props.histo.slice(0, 3);
   if (!expanded && bestMatch > 2) {
