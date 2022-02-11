@@ -131,8 +131,8 @@ export function ItemSlot(props: ItemSlotProps) {
           notext
         />
       </div>
-      {myEquipped.map((a) => (
-        <div>{(a.level.value - goodIlvl).toFixed(1)} ilvls</div>
+      {myEquipped.map((a, i) => (
+        <div key={i}>{(a.level.value - goodIlvl).toFixed(1)} ilvls</div>
       ))}
 
       {histoToShow.map((a, idx) => {

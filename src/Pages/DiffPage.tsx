@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { getProfile, getEquippedItemsByPlayer } from "../proxy/web-api";
 import cdata from "../json/composed.json";
 import {
@@ -139,19 +139,33 @@ export function DiffPage() {
     setArmorySearchInput(e.target.value);
   }
 
+  const inputRef = useRef<HTMLInputElement>(null);
+
   return (
     <PageContainer>
       <div>Comparing {profilesComparedCount} profiles</div>
 
       <div
         style={{
+          marginTop: 4,
           display: "flex",
           flexDirection: "row",
         }}
       >
         <input
+          ref={inputRef}
+          onFocus={() => {
+            if (inputRef.current) inputRef.current.select();
+          }}
           style={{
             width: 500,
+            backgroundColor: "#383838",
+            color: "lightgray",
+            borderStyle: "solid",
+            borderWidth: 1,
+            padding: 0,
+            paddingLeft: 2,
+            margin: 0,
           }}
           disabled={loading}
           onSubmit={submitNOOP}
