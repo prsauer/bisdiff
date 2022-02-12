@@ -110,6 +110,9 @@ export function DiffPage() {
   useEffect(() => {
     async function refreshData() {
       setLoading(true);
+      setTargetData([]);
+      setItemData([]);
+      setProfilesComparedCount(0);
       const prof = profileData;
       if (!profileIsLoading && prof) {
         const res = main(prof.p, prof.i);
@@ -186,6 +189,7 @@ export function DiffPage() {
         your spec.
       </div>
 
+      {(profileIsLoading || loading) && <div>Loading...</div>}
       {profileError && <div>An error occurred</div>}
       <div
         style={{
