@@ -45,10 +45,12 @@ async function findProfile(armorySearch: string) {
   const linkParts = armorySearch.split("/");
   const targetName = linkParts[linkParts.length - 1];
   const targetRealm = linkParts[linkParts.length - 2];
-  const targetProfile = await getProfile(targetName, targetRealm);
+  const targetRegion = linkParts[linkParts.length - 3];
+  const targetProfile = await getProfile(targetName, targetRealm, targetRegion);
   const targetItemData = await getEquippedItemsByPlayer(
     targetName,
-    targetRealm
+    targetRealm,
+    targetRegion
   );
   if (targetProfile && targetItemData) {
     return { p: targetProfile, i: targetItemData };
