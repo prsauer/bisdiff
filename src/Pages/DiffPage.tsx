@@ -202,7 +202,7 @@ export function DiffPage() {
       </div>
       <div style={{ marginTop: 12 }}>
         Known issues: Trinkets/rings aren't compared well due to having 2
-        equipped
+        equipped. Only EU/US supported.
       </div>
     </PageContainer>
   );
