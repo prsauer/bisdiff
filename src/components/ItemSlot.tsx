@@ -12,6 +12,8 @@ interface ItemSlotProps {
   }[];
   slotType: string;
   targetData: EquippedItem[];
+  profilesComparedCount: number;
+  showAll: boolean;
 }
 
 function morphItem(i?: EquippedItem) {
@@ -70,9 +72,22 @@ export function ItemSlot(props: ItemSlotProps) {
     percentOfMatch > 45 ? MatchQuality.GREEN : MatchQuality.YELLOW;
 
   if (percentOfMatch < 25) {
-    qualityOfMatch = MatchQuality.RED;
+    if (['FINGER_1', 'FINGER_2'].includes(props.slotType) && [0,1].includes(indexOfComparedTo)) {
+      qualityOfMatch = MatchQuality.GREEN;
+    } else {
+      qualityOfMatch = MatchQuality.RED;
+    }
   }
   if (indexOfComparedTo === 0) {
+    qualityOfMatch = MatchQuality.GREEN;
+  }
+
+  /* Handle edge case for empty slots */
+  const totalSeen = histoSameSlot.reduce((cur, prev) => cur + prev.count, 0);
+  const percentEmpty = 100*(props.profilesComparedCount - totalSeen)/props.profilesComparedCount;
+  const isEmptyForTarget = myEquipped.length === 0;
+
+  if (isEmptyForTarget && percentEmpty > 75) {
     qualityOfMatch = MatchQuality.GREEN;
   }
 
@@ -90,6 +105,10 @@ export function ItemSlot(props: ItemSlotProps) {
   const histoToShow = expanded ? props.histo : props.histo.slice(0, 3);
   if (!expanded && bestMatch > 2) {
     histoToShow[2] = props.histo[bestMatch];
+  }
+
+  if (!props.showAll && bestMatch === 0) {
+    return null;
   }
 
   return (
@@ -153,6 +172,7 @@ export function ItemSlot(props: ItemSlotProps) {
           </div>
         );
       })}
+      { percentEmpty > 5 && <div>{ isEmptyForTarget && "*" }{percentEmpty.toFixed(1)}% empty</div>}
     </div>
   );
 }

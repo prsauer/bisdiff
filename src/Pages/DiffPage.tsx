@@ -12,6 +12,7 @@ import { useSearchParams } from "react-router-dom";
 import { TappableText } from "../design/TappableText";
 import { useQuery } from "react-query";
 import { useCookies } from "react-cookie";
+import { setConstantValue } from "typescript";
 
 const compositeData = cdata as unknown as {
   specId: string;
@@ -69,6 +70,7 @@ export function DiffPage() {
     cookies[LAST_SEARCH_COOKIE] || ""
   );
   const [loading, setLoading] = useState(false);
+  const [showAll, setShowAll] = useState(true);
   const [profilesComparedCount, setProfilesComparedCount] = useState(0);
   const {
     data: profileData,
@@ -188,6 +190,7 @@ export function DiffPage() {
         Compares your equipped items to the top 5k pvp players, filtered for
         your spec.
       </div>
+      <TappableText text={'Show/Hide already BIS gear'} onClick={() => setShowAll(!showAll)}/>
 
       {(profileIsLoading || loading) && <div>Loading...</div>}
       {profileError && <div>An error occurred</div>}
@@ -201,7 +204,7 @@ export function DiffPage() {
         }}
       >
         {itemData.map((b) => (
-          <ItemSlot key={b.slotType} {...b} targetData={targetData} />
+          <ItemSlot key={b.slotType} {...b} targetData={targetData} profilesComparedCount={profilesComparedCount} showAll={showAll} />
         ))}
       </div>
       <div style={{ marginTop: 12 }}>
