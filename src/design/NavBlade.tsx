@@ -50,14 +50,19 @@ const NavBladeButtonLabel = styled.span<{ active: boolean }>`
 export const NavBlade = ({
   children,
   leftArrow = false,
+  label = "",
 }: {
   children: ReactNode | ReactNode[];
   leftArrow?: boolean;
+  label?: string;
 }) => {
   return (
     <NavBladeDiv>
-      {leftArrow ? "↩" : "↪"}
-      <NavBladeInternalDiv>{children}</NavBladeInternalDiv>
+      <NavBladeInternalDiv>
+        {label && <div>{label}: </div>}
+        {!label && <div>{leftArrow ? "↩" : "↪"}</div>}
+        {children}
+      </NavBladeInternalDiv>
     </NavBladeDiv>
   );
 };

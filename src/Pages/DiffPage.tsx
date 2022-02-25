@@ -2,9 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import { getProfile, getEquippedItemsByPlayer } from "../proxy/web-api";
 import cdata from "../json/composed.json";
 import {
-  CharacterProfile,
+  CombatUnitSpecNames,
   EquippedItem,
   EquippedItemsCharacter,
+  SpecIdsByClass,
 } from "../proxy/api-types";
 import { ItemSlot } from "../components/ItemSlot";
 import { PageContainer } from "../design/PageContainer";
@@ -12,7 +13,7 @@ import { useSearchParams } from "react-router-dom";
 import { TappableText } from "../design/TappableText";
 import { useQuery } from "react-query";
 import { useCookies } from "react-cookie";
-import { setConstantValue } from "typescript";
+import { NavBlade, NavBladeButton } from "../design/NavBlade";
 
 const compositeData = cdata as unknown as {
   specId: string;
@@ -28,11 +29,7 @@ const compositeData = cdata as unknown as {
   profilesComparedCount: number;
 }[];
 
-function main(
-  targetProfile: CharacterProfile,
-  targetItemData: EquippedItemsCharacter
-) {
-  const targetSpec = targetProfile.active_spec.id;
+function main(targetSpec: number, targetItemData: EquippedItemsCharacter) {
   const targetData = targetItemData.equipped_items;
   const data = compositeData.find((s) => s.specId === `${targetSpec}`);
   return {
@@ -72,6 +69,8 @@ export function DiffPage() {
   const [loading, setLoading] = useState(false);
   const [showAll, setShowAll] = useState(true);
   const [profilesComparedCount, setProfilesComparedCount] = useState(0);
+  const [specOverride, setSpecOverride] = useState(257);
+
   const {
     data: profileData,
     error: profileError,
@@ -117,7 +116,7 @@ export function DiffPage() {
       setProfilesComparedCount(0);
       const prof = profileData;
       if (!profileIsLoading && prof) {
-        const res = main(prof.p, prof.i);
+        const res = main(specOverride || prof.p.active_spec.id, prof.i);
         setLoading(true);
         setItemData(res.histoMaps || []);
         setTargetData(res.targetData || []);
@@ -131,7 +130,7 @@ export function DiffPage() {
       setLoading(false);
     }
     refreshData();
-  }, [profileIsLoading]);
+  }, [profileIsLoading, specOverride]);
 
   async function onPressCompare() {
     setCookies(LAST_SEARCH_COOKIE, armorySearchInput);
@@ -150,8 +149,10 @@ export function DiffPage() {
 
   return (
     <PageContainer>
-      <div>Comparing {profilesComparedCount} profiles</div>
-
+      <div style={{ marginTop: 12, color: "gray" }}>
+        Compares your equipped items to the top 5k pvp players, filtered for
+        your spec.
+      </div>
       <div
         style={{
           marginTop: 4,
@@ -186,25 +187,53 @@ export function DiffPage() {
           text={"compare"}
         />
       </div>
-      <div style={{ marginTop: 12 }}>
-        Compares your equipped items to the top 5k pvp players, filtered for
-        your spec.
-      </div>
-      <TappableText text={'Show/Hide already BIS gear'} onClick={() => setShowAll(!showAll)}/>
-
+      <NavBlade>
+        <NavBladeButton
+          label={"Show/Hide already BIS gear"}
+          selected={showAll ? "Show/Hide already BIS gear" : ""}
+          clickHandler={() => setShowAll(!showAll)}
+        />
+      </NavBlade>
       {(profileIsLoading || loading) && <div>Loading...</div>}
       {profileError && <div>An error occurred</div>}
+      {profileData && (
+        <NavBlade label="Override spec">
+          {SpecIdsByClass[profileData.p.character_class.name].map((d) => (
+            <NavBladeButton
+              key={d}
+              label={CombatUnitSpecNames[d]}
+              selected={CombatUnitSpecNames[`${specOverride}`]}
+              clickHandler={() => setSpecOverride(parseInt(d))}
+            />
+          ))}
+        </NavBlade>
+      )}
+      {profileData && (
+        <div style={{ marginTop: 12 }}>
+          Found profile: {profileData.p.name}, {profileData.p.race.name}{" "}
+          {profileData.p.active_spec.name} {profileData.p.character_class.name}
+        </div>
+      )}
+      {!profileIsLoading && (
+        <div>Comparing to {profilesComparedCount} profiles on the ladder</div>
+      )}
       <div
         style={{
           display: "flex",
           flexDirection: "row",
           flexWrap: "wrap",
           margin: 25,
-          maxWidth: 800,
+          maxWidth: 950,
         }}
       >
         {itemData.map((b) => (
-          <ItemSlot key={b.slotType} {...b} targetData={targetData} profilesComparedCount={profilesComparedCount} showAll={showAll} />
+          <ItemSlot
+            key={b.slotType}
+            {...b}
+            targetData={targetData}
+            profilesComparedCount={profilesComparedCount}
+            showAll={showAll}
+          />
         ))}
       </div>
       <div style={{ marginTop: 12 }}>
