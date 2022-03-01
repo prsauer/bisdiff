@@ -69,7 +69,7 @@ export function DiffPage() {
   const [loading, setLoading] = useState(false);
   const [showAll, setShowAll] = useState(true);
   const [profilesComparedCount, setProfilesComparedCount] = useState(0);
-  const [specOverride, setSpecOverride] = useState(257);
+  const [specOverride, setSpecOverride] = useState<number | undefined>();
 
   const {
     data: profileData,
@@ -134,6 +134,7 @@ export function DiffPage() {
 
   async function onPressCompare() {
     setCookies(LAST_SEARCH_COOKIE, armorySearchInput);
+    setSpecOverride(undefined);
     setSearchParams({ al: btoa(armorySearchInput).toString() });
   }
 
