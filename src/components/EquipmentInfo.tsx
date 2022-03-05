@@ -85,6 +85,7 @@ export function EquipmentInfo({
 }: IProps) {
   // This hack is to make sure the wowhead powered <a> tooltips
   // load even when this component is rendered server-side
+  const itemId = item?.id;
   useEffect(() => {
     try {
       // eslint-disable-next-line no-eval
@@ -92,7 +93,7 @@ export function EquipmentInfo({
     } catch (e) {
       // oh well
     }
-  }, []);
+  }, [itemId]);
 
   if (!item?.id) {
     return null;

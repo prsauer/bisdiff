@@ -1,7 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { getProfile, getEquippedItemsByPlayer } from "../proxy/web-api";
 import cdata from "../json/composed.json";
 import {
+  CharacterProfile,
   CombatUnitSpecNames,
   EquippedItem,
   EquippedItemsCharacter,
@@ -11,9 +12,9 @@ import { ItemSlot } from "../components/ItemSlot";
 import { PageContainer } from "../design/PageContainer";
 import { useSearchParams } from "react-router-dom";
 import { TappableText } from "../design/TappableText";
-import { useQuery } from "react-query";
 import { useCookies } from "react-cookie";
 import { NavBlade, NavBladeButton } from "../design/NavBlade";
+import { simcReportToItemArray } from "../util/decodeSimc";
 
 const compositeData = cdata as unknown as {
   specId: string;
@@ -29,7 +30,10 @@ const compositeData = cdata as unknown as {
   profilesComparedCount: number;
 }[];
 
-function main(targetSpec: number, targetItemData: EquippedItemsCharacter) {
+function calculateHistograms(
+  targetSpec: number,
+  targetItemData: EquippedItemsCharacter
+) {
   const targetData = targetItemData.equipped_items;
   const data = compositeData.find((s) => s.specId === `${targetSpec}`);
   return {
@@ -51,7 +55,7 @@ async function findProfile(armorySearch: string) {
     targetRegion
   );
   if (targetProfile && targetItemData) {
-    return { p: targetProfile, i: targetItemData };
+    return { profile: targetProfile, equippedCharacter: targetItemData };
   } else {
     throw new Error("Cannot find profile");
   }
@@ -61,32 +65,27 @@ const LAST_SEARCH_COOKIE = "last-search-query";
 
 export function DiffPage() {
   let [searchParams, setSearchParams] = useSearchParams();
+  const [dataSource, setDataSource] = useState("armory");
   const [cookies, setCookies] = useCookies([LAST_SEARCH_COOKIE]);
   const armorySearch = atob(searchParams.get("al") || "");
   const [armorySearchInput, setArmorySearchInput] = useState(
     cookies[LAST_SEARCH_COOKIE] || ""
   );
+  const [simcDataInput, setSimcDataInput] = useState("");
+
   const [loading, setLoading] = useState(false);
   const [showAll, setShowAll] = useState(true);
   const [profilesComparedCount, setProfilesComparedCount] = useState(0);
   const [specOverride, setSpecOverride] = useState<number | undefined>();
 
-  const {
-    data: profileData,
-    error: profileError,
-    isLoading: profileIsLoading,
-  } = useQuery(
-    ["find-profile", armorySearch],
-    () => {
-      if (armorySearch) return findProfile(armorySearch);
-    },
-    {
-      retry: (failureCount, error) => {
-        if ((error as Error).message === "Fetch error 404") return false;
-        return true;
-      },
-    }
-  );
+  const [data, setData] = useState<
+    | {
+        profile: CharacterProfile;
+        equippedCharacter: EquippedItemsCharacter;
+      }
+    | undefined
+  >(undefined);
+
   const [itemData, setItemData] = useState<
     {
       histo: {
@@ -98,44 +97,37 @@ export function DiffPage() {
       slotType: string;
     }[]
   >([]);
-  const [targetData, setTargetData] = useState<EquippedItem[]>([]);
-  useEffect(() => {
-    try {
-      // eslint-disable-next-line no-eval
-      eval("$WowheadPower.refreshLinks()");
-    } catch (e) {
-      // oh well
-    }
-  }, []);
-
-  useEffect(() => {
-    async function refreshData() {
-      setLoading(true);
-      setTargetData([]);
-      setItemData([]);
-      setProfilesComparedCount(0);
-      const prof = profileData;
-      if (!profileIsLoading && prof) {
-        const res = main(specOverride || prof.p.active_spec.id, prof.i);
-        setLoading(true);
-        setItemData(res.histoMaps || []);
-        setTargetData(res.targetData || []);
-        setProfilesComparedCount(res.profilesComparedCount || 0);
-        setTimeout(() => {
-          // eslint-disable-next-line no-eval
-          eval("$WowheadPower.refreshLinks()");
-          setLoading(false);
-        }, 500);
-      }
-      setLoading(false);
-    }
-    refreshData();
-  }, [profileIsLoading, specOverride]);
 
   async function onPressCompare() {
-    setCookies(LAST_SEARCH_COOKIE, armorySearchInput);
+    setDataSource("armory");
+    setLoading(true);
     setSpecOverride(undefined);
-    setSearchParams({ al: btoa(armorySearchInput).toString() });
+    setData(undefined);
+    setItemData([]);
+    setProfilesComparedCount(0);
+    const profile = await findProfile(armorySearchInput);
+    if (!profile?.equippedCharacter) {
+      setLoading(false);
+      return;
+    }
+    const res = calculateHistograms(
+      specOverride || profile.profile.active_spec.id || 100,
+      profile?.equippedCharacter
+    );
+    setData(profile);
+    setItemData(res.histoMaps || []);
+    setProfilesComparedCount(res.profilesComparedCount || 0);
+    setLoading(false);
+  }
+
+  function onPressLoadSIMC() {
+    setDataSource("simc");
+    setSpecOverride(undefined);
+    const targetItemData = simcReportToItemArray(simcDataInput);
+    setData(targetItemData);
+    const res = calculateHistograms(250, targetItemData.equippedCharacter);
+    setItemData(res.histoMaps || []);
+    setProfilesComparedCount(res.profilesComparedCount || 0);
   }
 
   function submitNOOP(e: any) {
@@ -146,7 +138,12 @@ export function DiffPage() {
     setArmorySearchInput(e.target.value);
   }
 
+  function simcInputChanged(e: any) {
+    setSimcDataInput(e.target.value);
+  }
+
   const inputRef = useRef<HTMLInputElement>(null);
+  const simcInputRef = useRef<HTMLTextAreaElement>(null);
 
   return (
     <PageContainer>
@@ -188,6 +185,40 @@ export function DiffPage() {
           text={"compare"}
         />
       </div>
+      <div
+        style={{
+          marginTop: 4,
+          display: "flex",
+          flexDirection: "row",
+        }}
+      >
+        <textarea
+          ref={simcInputRef}
+          onFocus={() => {
+            if (simcInputRef.current) simcInputRef.current.select();
+          }}
+          style={{
+            width: 500,
+            backgroundColor: "#383838",
+            color: "lightgray",
+            borderStyle: "solid",
+            borderWidth: 1,
+            padding: 0,
+            paddingLeft: 2,
+            margin: 0,
+          }}
+          disabled={loading}
+          onSubmit={submitNOOP}
+          value={simcDataInput}
+          onChange={simcInputChanged}
+          placeholder="paste simc data here"
+        />
+        <TappableText
+          disabled={loading}
+          onClick={onPressLoadSIMC}
+          text={"load simc data"}
+        />
+      </div>
       <NavBlade>
         <NavBladeButton
           label={"Show/Hide already BIS gear"}
@@ -195,27 +226,24 @@ export function DiffPage() {
           clickHandler={() => setShowAll(!showAll)}
         />
       </NavBlade>
-      {(profileIsLoading || loading) && <div>Loading...</div>}
-      {profileError && <div>An error occurred</div>}
-      {profileData && (
-        <NavBlade label="Override spec">
-          {SpecIdsByClass[profileData.p.character_class.name].map((d) => (
-            <NavBladeButton
-              key={d}
-              label={CombatUnitSpecNames[d]}
-              selected={CombatUnitSpecNames[`${specOverride}`]}
-              clickHandler={() => setSpecOverride(parseInt(d))}
-            />
-          ))}
-        </NavBlade>
-      )}
-      {profileData && (
+      <NavBlade label="Override spec">
+        {SpecIdsByClass["Priest"].map((d) => (
+          <NavBladeButton
+            key={d}
+            label={CombatUnitSpecNames[d]}
+            selected={CombatUnitSpecNames[`${specOverride}`]}
+            clickHandler={() => setSpecOverride(parseInt(d))}
+          />
+        ))}
+      </NavBlade>
+      {loading && <div>Loading...</div>}
+      {data && (
         <div style={{ marginTop: 12 }}>
-          Found profile: {profileData.p.name}, {profileData.p.race.name}{" "}
-          {profileData.p.active_spec.name} {profileData.p.character_class.name}
+          Found profile: {data.profile.name}, {data.profile.race.name}{" "}
+          {data.profile.active_spec.name} {data.profile.character_class.name}
         </div>
       )}
-      {!profileIsLoading && (
+      {data && (
         <div>Comparing to {profilesComparedCount} profiles on the ladder</div>
       )}
       <div
@@ -227,16 +255,21 @@ export function DiffPage() {
           maxWidth: 950,
         }}
       >
-        {itemData.map((b) => (
-          <ItemSlot
-            key={b.slotType}
-            {...b}
-            targetData={targetData}
-            profilesComparedCount={profilesComparedCount}
-            showAll={showAll}
-          />
-        ))}
+        {data?.equippedCharacter.equipped_items &&
+          itemData.map((b) => (
+            <ItemSlot
+              key={b.slotType}
+              {...b}
+              targetData={data.equippedCharacter.equipped_items}
+              profilesComparedCount={profilesComparedCount}
+              showAll={showAll}
+            />
+          ))}
       </div>
+      <div>Data Source: {dataSource}</div>
+      {dataSource === "simc" && (
+        <div>Simc data does not currently compare iLvls</div>
+      )}
       <div style={{ marginTop: 12 }}>
         Known issues: Trinkets/rings aren't compared well due to having 2
         equipped. Only EU/US supported.
