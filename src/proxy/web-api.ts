@@ -12,12 +12,12 @@ export async function getProfile(
   region: string
 ): Promise<CharacterProfile | undefined> {
   let res = await fetch(
-    `https://${api_root}/profile/wow/character/${realm}/${name}?namespace=profile-${region}&locale=en_US`
+    `https://${api_root}/profile/wow/character/${realm.toLocaleLowerCase()}/${name.toLocaleLowerCase()}?namespace=profile-${region}&locale=en_US`
   );
   if (res.status !== 200) {
     await sleep(1000);
     res = await fetch(
-      `https://${api_root}/profile/wow/character/${realm}/${name}?namespace=profile-${region}&locale=en_US`
+      `https://${api_root}/profile/wow/character/${realm.toLocaleLowerCase()}/${name.toLocaleLowerCase()}?namespace=profile-${region}&locale=en_US`
     );
   }
   if (res.status !== 200) {
@@ -32,12 +32,12 @@ export async function getEquippedItemsByPlayer(
   region: string
 ): Promise<EquippedItemsCharacter | undefined> {
   let res = await fetch(
-    `https://${api_root}/profile/wow/character/${realm}/${name}/equipment?namespace=profile-${region}&locale=en_US`
+    `https://${api_root}/profile/wow/character/${realm.toLocaleLowerCase()}/${name.toLocaleLowerCase()}/equipment?namespace=profile-${region}&locale=en_US`
   );
   if (res.status !== 200) {
     await sleep(1000);
     res = await fetch(
-      `https://${api_root}/profile/wow/character/${realm}/${name}/equipment?namespace=profile-${region}&locale=en_US`
+      `https://${api_root}/profile/wow/character/${realm.toLocaleLowerCase()}/${name.toLocaleLowerCase()}/equipment?namespace=profile-${region}&locale=en_US`
     );
   }
   if (res.status !== 200) {
