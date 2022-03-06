@@ -1,7 +1,6 @@
 import { CharacterProfile, EquippedItemsCharacter } from "../proxy/api-types";
 
 const SlotsRequiringEnchants = [
-  "LEGS",
   "FINGER_1",
   "FINGER_2",
   "CHEST",

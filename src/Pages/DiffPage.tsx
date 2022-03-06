@@ -15,8 +15,9 @@ import { TappableText } from "../design/TappableText";
 import { useCookies } from "react-cookie";
 import { NavBlade, NavBladeButton } from "../design/NavBlade";
 import { simcReportToItemArray } from "../util/decodeSimc";
-import { findMissingEnchantments } from "../util/analysis";
-import { Heading2, Heading3 } from "../design/atoms";
+import { findMissingEnchantments } from "../util/enchants";
+import { Heading2 } from "../design/atoms";
+import { findMissingUpgrades } from "../util/upgrades";
 
 const compositeData = cdata as unknown as {
   specId: string;
@@ -165,6 +166,9 @@ export function DiffPage() {
   const missingEnchants = data?.equippedCharacter
     ? findMissingEnchantments(data.equippedCharacter, data.profile)
     : [];
+  const missingUpgrades = data?.equippedCharacter
+    ? findMissingUpgrades(data.equippedCharacter, data.profile)
+    : [];
 
   return (
     <PageContainer>
@@ -268,6 +272,9 @@ export function DiffPage() {
       )}
       {missingEnchants.map((a) => (
         <Heading2 key={a}>Slot missing enchantment: {a}</Heading2>
+      ))}
+      {missingUpgrades.map((a) => (
+        <Heading2 key={a}>{a}</Heading2>
       ))}
       <div
         style={{

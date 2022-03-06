@@ -9,7 +9,10 @@ import { capitalizeFirstLetter } from "./strings";
 import ilvlData from "../json/itemLevels.json";
 import ilvlBonusData from "../json/itemLevelBonuses.json";
 
-const itemLevels = ilvlData as unknown as Record<string, number>;
+const itemLevels = ilvlData as unknown as Record<
+  string,
+  { itemLevel: number; name: string }
+>;
 const itemLevelBonuses = ilvlBonusData as unknown as Record<
   string,
   { id: number; level: number }
@@ -95,6 +98,19 @@ function fixDhDk(s: string) {
   return s;
 }
 
+function fixBm(s: string) {
+  if (s === "beast_mastery") {
+    return "BeastMastery";
+  }
+  if (s === "brew_master") {
+    return "BrewMaster";
+  }
+  if (s === "brewmaster") {
+    return "BrewMaster";
+  }
+  return s;
+}
+
 export function simcReportToItemArray(report: string): {
   profile: CharacterProfile;
   equippedCharacter: EquippedItemsCharacter;
@@ -145,7 +161,7 @@ export function simcReportToItemArray(report: string): {
           `${capitalizeFirstLetter(
             fixDhDk(profile.character_class.name.toLocaleLowerCase())
           )}_${capitalizeFirstLetter(
-            profile.active_spec.name
+            fixBm(profile.active_spec.name)
           )}` as keyof typeof CombatUnitSpec
         ]
       );
@@ -164,6 +180,8 @@ export function simcReportToItemArray(report: string): {
             attributeObject[attrParts[0]] = attrParts[1];
           }
         }
+        attributeObject.name =
+          itemLevels[`${attributeObject.id}`].name || "Unknown Item";
         attributeObject.slot = {
           name: simcNameToApiName[currentSlot] || currentSlot.toUpperCase(),
           type: simcNameToApiName[currentSlot] || currentSlot.toUpperCase(),
@@ -172,11 +190,18 @@ export function simcReportToItemArray(report: string): {
           id: attributeObject.id,
         };
         attributeObject.level = {
-          value: itemLevels[`${attributeObject.id}`] || 0,
+          value: itemLevels[`${attributeObject.id}`].itemLevel || 0,
         };
 
+        console.log(attributeObject);
         if (attributeObject.bonus_id) {
-          attributeObject.bonus_list = attributeObject.bonus_id;
+          if (Array.isArray(attributeObject.bonus_id)) {
+            attributeObject.bonus_list = attributeObject.bonus_id.map((a) =>
+              parseInt(a)
+            );
+          } else {
+            attributeObject.bonus_list = [parseInt(attributeObject.bonus_id)];
+          }
           delete attributeObject.bonus_id;
         }
         // See if item has an upgraded status and has higher ilvl

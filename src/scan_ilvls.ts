@@ -48,7 +48,7 @@ const usedItems = compositeData
   .map((a) => a.histoMaps.map((i) => i.histo.map((h) => h.item.item.id)))
   .flat(4);
 
-const mappedItems = new Set<{ id: number; itemLevel: number }>();
+const mappedItems = new Set<{ id: number; itemLevel: number; name: string }>();
 
 for (let i = 0; i < usedItems.length; i++) {
   const curId = usedItems[i];
@@ -65,13 +65,14 @@ for (let i = 0; i < usedItems.length; i++) {
     mappedItems.add({
       id: curId,
       itemLevel: record.itemLevel,
+      name: record.name,
     });
   }
 }
 
-const mapping: Record<number, number> = {};
+const mapping: Record<number, { itemLevel: number; name: string }> = {};
 mappedItems.forEach((a) => {
-  mapping[a.id] = a.itemLevel;
+  mapping[a.id] = { itemLevel: a.itemLevel, name: a.name };
 });
 
 fs.writeFileSync(
