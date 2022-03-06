@@ -70,8 +70,8 @@ Object.keys(CombatUnitSpec).forEach(
 export const SpecIdsByClass: Record<string, string[]> = {};
 Object.keys(ClassName).forEach(
   (k) =>
-    (SpecIdsByClass[k] = Object.keys(CombatUnitSpec)
-      .filter((s) => s.search(k) > -1)
+    (SpecIdsByClass[k.toLocaleLowerCase()] = Object.keys(CombatUnitSpec)
+      .filter((s) => s.startsWith(k))
       .map((v) => CombatUnitSpec[v as keyof typeof CombatUnitSpec]))
 );
 

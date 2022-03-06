@@ -252,14 +252,17 @@ export function DiffPage() {
         />
       </NavBlade>
       <NavBlade label="Override spec">
-        {SpecIdsByClass["Priest"].map((d) => (
-          <NavBladeButton
-            key={d}
-            label={CombatUnitSpecNames[d]}
-            selected={CombatUnitSpecNames[`${specOverride}`]}
-            clickHandler={() => writeSpecOverride(d)}
-          />
-        ))}
+        {data &&
+          SpecIdsByClass[data?.profile.character_class.name.toLowerCase()].map(
+            (d) => (
+              <NavBladeButton
+                key={d}
+                label={CombatUnitSpecNames[d]}
+                selected={CombatUnitSpecNames[`${specOverride}`]}
+                clickHandler={() => writeSpecOverride(d)}
+              />
+            )
+          )}
       </NavBlade>
       {loading && <div>Loading...</div>}
       {data && (
