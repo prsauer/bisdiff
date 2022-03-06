@@ -142,6 +142,17 @@ export function DiffPage() {
     setSimcDataInput(e.target.value);
   }
 
+  function writeSpecOverride(d: string) {
+    setSpecOverride(parseInt(d));
+    if (!data) return;
+    const res = calculateHistograms(
+      specOverride || data.profile.active_spec.id || 100,
+      data.equippedCharacter
+    );
+    setItemData(res.histoMaps || []);
+    setProfilesComparedCount(res.profilesComparedCount || 0);
+  }
+
   const inputRef = useRef<HTMLInputElement>(null);
   const simcInputRef = useRef<HTMLTextAreaElement>(null);
 
@@ -232,7 +243,7 @@ export function DiffPage() {
             key={d}
             label={CombatUnitSpecNames[d]}
             selected={CombatUnitSpecNames[`${specOverride}`]}
-            clickHandler={() => setSpecOverride(parseInt(d))}
+            clickHandler={() => writeSpecOverride(d)}
           />
         ))}
       </NavBlade>
