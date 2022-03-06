@@ -6,7 +6,7 @@ import {
 } from "./proxy/api-types";
 
 const api_root = "us.api.blizzard.com";
-const access_token = "zxcv";
+const access_token = "zxc";
 
 export function sleep(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -14,7 +14,7 @@ export function sleep(ms: number) {
 
 export async function getLeaders(): Promise<LeaderboardResult> {
   const res = await fetch(
-    `https://${api_root}/data/wow/pvp-season/31/pvp-leaderboard/3v3?namespace=dynamic-us&locale=en_US&access_token=${access_token}`
+    `https://${api_root}/data/wow/pvp-season/32/pvp-leaderboard/3v3?namespace=dynamic-us&locale=en_US&access_token=${access_token}`
   );
   console.log(res);
   return res.json() as Promise<LeaderboardResult>;
