@@ -25,6 +25,7 @@
   "type": "module",
   "scripts": {
     "scrape": "node --loader ts-node/esm --experimental-specifier-resolution=node src\\scrape.ts",
+    "scan_ilvls": "node --loader ts-node/esm --experimental-specifier-resolution=node src\\scan_ilvls.ts",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

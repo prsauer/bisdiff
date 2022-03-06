@@ -15,6 +15,8 @@ import { TappableText } from "../design/TappableText";
 import { useCookies } from "react-cookie";
 import { NavBlade, NavBladeButton } from "../design/NavBlade";
 import { simcReportToItemArray } from "../util/decodeSimc";
+import { findMissingEnchantments } from "../util/analysis";
+import { Heading2, Heading3 } from "../design/atoms";
 
 const compositeData = cdata as unknown as {
   specId: string;
@@ -125,7 +127,10 @@ export function DiffPage() {
     setSpecOverride(undefined);
     const targetItemData = simcReportToItemArray(simcDataInput);
     setData(targetItemData);
-    const res = calculateHistograms(250, targetItemData.equippedCharacter);
+    const res = calculateHistograms(
+      targetItemData.profile.active_spec.id,
+      targetItemData.equippedCharacter
+    );
     setItemData(res.histoMaps || []);
     setProfilesComparedCount(res.profilesComparedCount || 0);
   }
@@ -143,18 +148,23 @@ export function DiffPage() {
   }
 
   function writeSpecOverride(d: string) {
-    setSpecOverride(parseInt(d));
+    const newSpecOverride = parseInt(d);
     if (!data) return;
     const res = calculateHistograms(
-      specOverride || data.profile.active_spec.id || 100,
+      newSpecOverride || data.profile.active_spec.id || 100,
       data.equippedCharacter
     );
+    setSpecOverride(newSpecOverride);
     setItemData(res.histoMaps || []);
     setProfilesComparedCount(res.profilesComparedCount || 0);
   }
 
   const inputRef = useRef<HTMLInputElement>(null);
   const simcInputRef = useRef<HTMLTextAreaElement>(null);
+
+  const missingEnchants = data?.equippedCharacter
+    ? findMissingEnchantments(data.equippedCharacter, data.profile)
+    : [];
 
   return (
     <PageContainer>
@@ -250,13 +260,15 @@ export function DiffPage() {
       {loading && <div>Loading...</div>}
       {data && (
         <div style={{ marginTop: 12 }}>
-          Found profile: {data.profile.name}, {data.profile.race.name}{" "}
-          {data.profile.active_spec.name} {data.profile.character_class.name}
+          Found profile: {data.profile.name},{" "}
+          {data.profile.race.name.toLocaleLowerCase()}{" "}
+          {data.profile.active_spec.name.toLocaleLowerCase()}{" "}
+          {data.profile.character_class.name.toLocaleLowerCase()}
         </div>
       )}
-      {data && (
-        <div>Comparing to {profilesComparedCount} profiles on the ladder</div>
-      )}
+      {missingEnchants.map((a) => (
+        <Heading2 key={a}>Slot missing enchantment: {a}</Heading2>
+      ))}
       <div
         style={{
           display: "flex",
@@ -277,14 +289,15 @@ export function DiffPage() {
             />
           ))}
       </div>
-      <div>Data Source: {dataSource}</div>
-      {dataSource === "simc" && (
-        <div>Simc data does not currently compare iLvls</div>
-      )}
+
       <div style={{ marginTop: 12 }}>
         Known issues: Trinkets/rings aren't compared well due to having 2
         equipped. Only EU/US supported.
       </div>
+      <div>Data Source: {dataSource}</div>
+      {data && (
+        <div>Comparing to {profilesComparedCount} profiles on the ladder</div>
+      )}
     </PageContainer>
   );
 }

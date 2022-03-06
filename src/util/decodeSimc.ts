@@ -6,6 +6,14 @@ import {
   EquippedItemsCharacter,
 } from "../proxy/api-types";
 import { capitalizeFirstLetter } from "./strings";
+import ilvlData from "../json/itemLevels.json";
+import ilvlBonusData from "../json/itemLevelBonuses.json";
+
+const itemLevels = ilvlData as unknown as Record<string, number>;
+const itemLevelBonuses = ilvlBonusData as unknown as Record<
+  string,
+  { id: number; level: number }
+>;
 
 const simcSlotNames = [
   "head",
@@ -142,7 +150,6 @@ export function simcReportToItemArray(report: string): {
         ]
       );
     }
-    console.log("Decoding", currentLine);
     for (let j = 0; j < simcSlotNames.length; j++) {
       const currentSlot = simcSlotNames[j];
       if (currentLine.startsWith(currentSlot)) {
@@ -157,7 +164,6 @@ export function simcReportToItemArray(report: string): {
             attributeObject[attrParts[0]] = attrParts[1];
           }
         }
-        console.log("atr", attributeObject);
         attributeObject.slot = {
           name: simcNameToApiName[currentSlot] || currentSlot.toUpperCase(),
           type: simcNameToApiName[currentSlot] || currentSlot.toUpperCase(),
@@ -166,13 +172,50 @@ export function simcReportToItemArray(report: string): {
           id: attributeObject.id,
         };
         attributeObject.level = {
-          value: 0,
+          value: itemLevels[`${attributeObject.id}`] || 0,
         };
+
+        if (attributeObject.bonus_id) {
+          attributeObject.bonus_list = attributeObject.bonus_id;
+          delete attributeObject.bonus_id;
+        }
+        // See if item has an upgraded status and has higher ilvl
+        for (let b = 0; b < attributeObject.bonus_list.length; b++) {
+          const curBonus = attributeObject.bonus_list[b] as string;
+          if (itemLevelBonuses[curBonus]) {
+            attributeObject.level.value += itemLevelBonuses[curBonus].level;
+          }
+          if ("7881" === curBonus) {
+            // Shim for crafted items
+            attributeObject.level.value = 262;
+          }
+        }
+
+        attributeObject.enchantments = [];
+        if (Array.isArray(attributeObject.enchant_id)) {
+          attributeObject.enchantments = attributeObject.enchant_id.map(
+            (a) => ({ enchantment_id: a })
+          );
+        } else {
+          if (attributeObject.enchant_id) {
+            attributeObject.enchantments = [
+              { enchantment_id: attributeObject.enchant_id },
+            ];
+          }
+        }
+        delete attributeObject.enchant_id;
+        delete attributeObject.id;
         rval.push(attributeObject as unknown as EquippedItem);
       }
     }
   }
-  console.log(character);
+  console.log({
+    profile,
+    equippedCharacter: {
+      character: character,
+      equipped_items: rval,
+    },
+  });
   return {
     profile,
     equippedCharacter: {
