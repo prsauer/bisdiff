@@ -180,8 +180,9 @@ export function simcReportToItemArray(report: string): {
             attributeObject[attrParts[0]] = attrParts[1];
           }
         }
-        attributeObject.name =
-          itemLevels[`${attributeObject.id}`].name || "Unknown Item";
+        attributeObject.name = itemLevels[`${attributeObject.id}`]
+          ? itemLevels[`${attributeObject.id}`].name
+          : "Unknown Item";
         attributeObject.slot = {
           name: simcNameToApiName[currentSlot] || currentSlot.toUpperCase(),
           type: simcNameToApiName[currentSlot] || currentSlot.toUpperCase(),
@@ -190,7 +191,9 @@ export function simcReportToItemArray(report: string): {
           id: attributeObject.id,
         };
         attributeObject.level = {
-          value: itemLevels[`${attributeObject.id}`].itemLevel || 0,
+          value: itemLevels[`${attributeObject.id}`]
+            ? itemLevels[`${attributeObject.id}`].itemLevel
+            : 0,
         };
 
         console.log(attributeObject);
