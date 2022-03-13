@@ -8,6 +8,7 @@ import { CookiesProvider } from "react-cookie";
 import { DiffPage } from "./Pages/DiffPage";
 import { ThemeProvider, useTheme } from "styled-components";
 import { CustomThemeType, darkTheme } from "./design/theme";
+import { WAPage } from "./Pages/WAPage";
 
 const queryClient = new QueryClient();
 
@@ -60,6 +61,7 @@ function CookieThemeMiddle() {
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<DiffPage />} />
+              <Route path="WA" element={<WAPage />} />
             </Route>
           </Routes>
         </BrowserRouter>

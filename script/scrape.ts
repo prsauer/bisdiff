@@ -1,4 +1,9 @@
-import { getEquippedItemsByPlayer, getLeaders, getProfile, sleep } from "./api";
+import {
+  getEquippedItemsByPlayer,
+  getLeaders,
+  getProfile,
+  sleep,
+} from "../src/api";
 import fs from "fs";
 import { join } from "path";
 
@@ -8,7 +13,7 @@ import {
   EquippedItemsCharacter,
   LeaderboardCharacter,
   LeaderboardResult,
-} from "./proxy/api-types";
+} from "../src/proxy/api-types";
 
 const slotTypes = [
   "HEAD",
