@@ -6,7 +6,7 @@ import {
 } from "./proxy/api-types";
 
 const api_root = "us.api.blizzard.com";
-const access_token = "zxc";
+const access_token = "USuk7vyXiLfBen3HELOeqRbYJk1H2cQzZx";
 
 export function sleep(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
