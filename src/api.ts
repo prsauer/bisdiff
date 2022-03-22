@@ -6,13 +6,41 @@ import {
 } from "./proxy/api-types";
 
 const api_root = "us.api.blizzard.com";
-const access_token = "USuk7vyXiLfBen3HELOeqRbYJk1H2cQzZx";
 
 export function sleep(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-export async function getLeaders(): Promise<LeaderboardResult> {
+type Authorization = {
+  access_token: string;
+  token_type: string;
+  expires_in: number;
+  sub: string;
+};
+
+export async function getApiKey(
+  region: string,
+  clientId: string,
+  clientSecret: string
+): Promise<Authorization> {
+  const res = await fetch(
+    `https://${region}.battle.net/oauth/token?grant_type=client_credentials`,
+    {
+      method: "POST",
+      headers: {
+        Authorization:
+          "Basic " +
+          Buffer.from(`${clientId}:${clientSecret}`).toString("base64"),
+      },
+    }
+  );
+  console.log(res);
+  return res.json() as Promise<Authorization>;
+}
+
+export async function getLeaders(
+  access_token: string
+): Promise<LeaderboardResult> {
   const res = await fetch(
     `https://${api_root}/data/wow/pvp-season/32/pvp-leaderboard/3v3?namespace=dynamic-us&locale=en_US&access_token=${access_token}`
   );
@@ -21,6 +49,7 @@ export async function getLeaders(): Promise<LeaderboardResult> {
 }
 
 export async function getProfile(
+  access_token: string,
   name: string,
   realm: string
 ): Promise<CharacterProfile | undefined> {
@@ -41,6 +70,7 @@ export async function getProfile(
 }
 
 export async function getEquippedItemsByPlayer(
+  access_token: string,
   name: string,
   realm: string
 ): Promise<EquippedItemsCharacter | undefined> {

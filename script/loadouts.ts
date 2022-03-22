@@ -254,8 +254,6 @@ const totalCombinations =
 console.log(`${itemLibrary.length} items in library`);
 console.log(`${totalCombinations} possible iterations`);
 
-const progressDivider = totalCombinations / 10;
-
 const validSolns: LoadoutTotal[] = [];
 
 let counter = 0;

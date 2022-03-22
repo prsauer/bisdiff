@@ -1,4 +1,5 @@
 import {
+  getApiKey,
   getEquippedItemsByPlayer,
   getLeaders,
   getProfile,
@@ -6,7 +7,6 @@ import {
 } from "../src/api";
 import fs from "fs";
 import { join } from "path";
-
 import {
   CharacterProfile,
   EquippedItem,
@@ -14,6 +14,9 @@ import {
   LeaderboardCharacter,
   LeaderboardResult,
 } from "../src/proxy/api-types";
+import authdata from "../.env.local.json";
+
+const { client_id: clientId, client_secret: clientSecret } = authdata;
 
 const slotTypes = [
   "HEAD",
@@ -164,10 +167,12 @@ function composeData(
 }
 
 async function main() {
+  const auth = await getApiKey("us", clientId, clientSecret);
+
   const LIMIT = 5000;
   const SKIP = 50;
 
-  const leads: LeaderboardResult = await getLeaders();
+  const leads: LeaderboardResult = await getLeaders(auth.access_token);
   const leaderBoardSlice = leads.entries.slice(0, LIMIT);
 
   const profileData: CharacterProfile[] = [];
@@ -180,6 +185,7 @@ async function main() {
             .slice(i, i + SKIP)
             .map((c) =>
               getProfile(
+                auth.access_token,
                 c.character.name.toLocaleLowerCase(),
                 c.character.realm.slug
               )
@@ -202,6 +208,7 @@ async function main() {
             .slice(i, i + SKIP)
             .map((c) =>
               getEquippedItemsByPlayer(
+                auth.access_token,
                 c.character.name.toLocaleLowerCase(),
                 c.character.realm.slug
               )
@@ -236,3 +243,5 @@ async function main() {
 }
 
 main().then((a) => console.log("Done", a));
+
+export {};
