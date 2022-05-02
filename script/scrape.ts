@@ -85,7 +85,7 @@ function computeHistogramSlow(ary: EquippedItem[]) {
     percent: number;
     item: any;
   }[] = [];
-  console.log(ary);
+  // console.log(ary);
   ary.forEach(
     (a) =>
       (result[`${a.item.id}`] = ary.filter(
@@ -114,7 +114,7 @@ function histoForSlot(
 ) {
   const itemsInSlot = profiles
     .map((p) => itemsData.find((e) => e.character?.id === p.id))
-    .map((e) => e?.equipped_items.find((e) => e.slot.type === slotType))
+    .map((e) => e?.equipped_items?.find((e) => e.slot.type === slotType))
     .filter((a) => a !== undefined);
   return computeHistogramSlow(itemsInSlot as EquippedItem[]);
 }
@@ -196,11 +196,11 @@ async function main() {
     await sleep(500);
   }
 
-  console.log(profileData.length, leaderBoardSlice);
+  // console.log(profileData.length, leaderBoardSlice);
 
   const itemsData: EquippedItemsCharacter[] = [];
   for (let i = 0; i < leaderBoardSlice.length - 1; i += SKIP) {
-    console.log(`items data at ${i} of ${LIMIT}`);
+    // console.log(`items data at ${i} of ${LIMIT}`);
     itemsData.push(
       ...((
         await Promise.all(

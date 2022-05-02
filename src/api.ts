@@ -44,7 +44,7 @@ export async function getLeaders(
   const res = await fetch(
     `https://${api_root}/data/wow/pvp-season/32/pvp-leaderboard/3v3?namespace=dynamic-us&locale=en_US&access_token=${access_token}`
   );
-  console.log(res);
+  // console.log(res);
   return res.json() as Promise<LeaderboardResult>;
 }
 
