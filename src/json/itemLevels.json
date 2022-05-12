@@ -1,95 +1,95 @@
 {
-  "31318": {
-    "itemLevel": 31,
-    "name": "Singing Crystal Axe"
+  "6263": {
+    "itemLevel": 12,
+    "name": "Blue Overalls"
   },
-  "40684": {
-    "itemLevel": 35,
-    "name": "Mirror of Truth"
+  "10111": {
+    "itemLevel": 28,
+    "name": "Wanderer's Hat"
   },
-  "49623": {
-    "itemLevel": 35,
-    "name": "Shadowmourne"
-  },
-  "52572": {
-    "itemLevel": 35,
-    "name": "Ashen Band of Endless Might"
+  "63352": {
+    "itemLevel": 20,
+    "name": "Shroud of Cooperation"
   },
   "65274": {
     "itemLevel": 29,
     "name": "Cloak of Coordination"
   },
-  "65360": {
-    "itemLevel": 29,
-    "name": "Cloak of Coordination"
-  },
-  "77539": {
+  "93432": {
     "itemLevel": 39,
-    "name": "Reinforced Retinal Armor"
+    "name": "Crafted Dreadful Gladiator's Treads of Alacrity"
   },
-  "95038": {
-    "itemLevel": 41,
-    "name": "Carapace of the Core"
+  "122365": {
+    "itemLevel": 1,
+    "name": "Reforged Truesilver Champion"
   },
-  "103457": {
-    "itemLevel": 42,
-    "name": "Prideful Gladiator's Warboots of Cruelty"
+  "134280": {
+    "itemLevel": 50,
+    "name": "Swordsinger's Wristguards"
   },
-  "112703": {
-    "itemLevel": 41,
-    "name": "Evil Eye of Galakras"
-  },
-  "112705": {
-    "itemLevel": 41,
-    "name": "Krugruk's Rigid Shoulderplates"
-  },
-  "112735": {
-    "itemLevel": 41,
-    "name": "Demolisher's Reinforced Belt"
-  },
-  "112882": {
-    "itemLevel": 41,
-    "name": "Calixian Bladebreakers"
-  },
-  "112933": {
-    "itemLevel": 41,
-    "name": "Legplates of Unthinking Strife"
+  "134442": {
+    "itemLevel": 50,
+    "name": "Tooled Rivermoor Boots"
   },
   "134542": {
     "itemLevel": 50,
     "name": "Jeweled Signet of Melandrus"
   },
-  "137539": {
+  "136714": {
     "itemLevel": 50,
-    "name": "Faulty Countermeasure"
+    "name": "Amalgam's Seventh Spine"
   },
-  "144082": {
-    "itemLevel": 39,
-    "name": "Fermenting Belt"
-  },
-  "147233": {
-    "itemLevel": 44,
-    "name": "Ley-Touched Sandals"
-  },
-  "150384": {
-    "itemLevel": 29,
-    "name": "Ring of Entropy"
-  },
-  "150417": {
-    "itemLevel": 29,
-    "name": "Drape of Benediction"
-  },
-  "151650": {
+  "137517": {
     "itemLevel": 50,
-    "name": "Soul of the Battlelord"
+    "name": "Striders of Furious Flight"
   },
-  "157898": {
-    "itemLevel": 58,
-    "name": "Fen Spirit Wraps"
+  "137520": {
+    "itemLevel": 50,
+    "name": "Permafrost Waistband"
+  },
+  "137532": {
+    "itemLevel": 50,
+    "name": "Seal of Saltheril"
+  },
+  "137533": {
+    "itemLevel": 50,
+    "name": "Ring of Minute Mirrors"
+  },
+  "137535": {
+    "itemLevel": 50,
+    "name": "Lavadrip Pendant"
+  },
+  "137541": {
+    "itemLevel": 50,
+    "name": "Moonlit Prism"
   },
   "158075": {
     "itemLevel": 58,
     "name": "Heart of Azeroth"
+  },
+  "165924": {
+    "itemLevel": 60,
+    "name": "High Tinker's Cape"
+  },
+  "166830": {
+    "itemLevel": 60,
+    "name": "Duskhaven Slippers"
+  },
+  "166833": {
+    "itemLevel": 60,
+    "name": "Duskhaven Jacket"
+  },
+  "166844": {
+    "itemLevel": 60,
+    "name": "Duskhaven Top Hat"
+  },
+  "167555": {
+    "itemLevel": 72,
+    "name": "Pocket-Sized Computation Device"
+  },
+  "171011": {
+    "itemLevel": 100,
+    "name": "A-N0M-A-L0U5 Orthogonal Optics"
   },
   "171323": {
     "itemLevel": 165,
@@ -127,93 +127,25 @@
     "itemLevel": 175,
     "name": "Shadowghast Armguards"
   },
-  "171442": {
-    "itemLevel": 165,
-    "name": "Shadowsteel Breastplate"
-  },
   "171443": {
     "itemLevel": 165,
     "name": "Shadowsteel Sabatons"
-  },
-  "171444": {
-    "itemLevel": 165,
-    "name": "Shadowsteel Gauntlets"
-  },
-  "171445": {
-    "itemLevel": 165,
-    "name": "Shadowsteel Helm"
   },
   "171446": {
     "itemLevel": 165,
     "name": "Shadowsteel Greaves"
   },
-  "171447": {
-    "itemLevel": 165,
-    "name": "Shadowsteel Pauldrons"
-  },
-  "171448": {
-    "itemLevel": 165,
-    "name": "Shadowsteel Waistguard"
-  },
-  "171449": {
-    "itemLevel": 165,
-    "name": "Shadowsteel Armguards"
-  },
-  "172250": {
-    "itemLevel": 165,
-    "name": "Shadebound Vest"
-  },
-  "172251": {
-    "itemLevel": 165,
-    "name": "Shadebound Treads"
-  },
-  "172252": {
-    "itemLevel": 165,
-    "name": "Shadebound Gauntlets"
-  },
-  "172253": {
-    "itemLevel": 165,
-    "name": "Shadebound Helm"
-  },
   "172254": {
     "itemLevel": 165,
     "name": "Shadebound Greaves"
-  },
-  "172255": {
-    "itemLevel": 165,
-    "name": "Shadebound Pauldrons"
-  },
-  "172256": {
-    "itemLevel": 165,
-    "name": "Shadebound Waistguard"
-  },
-  "172257": {
-    "itemLevel": 165,
-    "name": "Shadebound Armguards"
-  },
-  "172258": {
-    "itemLevel": 165,
-    "name": "Shadowscale Vest"
-  },
-  "172259": {
-    "itemLevel": 165,
-    "name": "Shadowscale Treads"
   },
   "172260": {
     "itemLevel": 165,
     "name": "Shadowscale Gauntlets"
   },
-  "172261": {
+  "172264": {
     "itemLevel": 165,
-    "name": "Shadowscale Helm"
-  },
-  "172262": {
-    "itemLevel": 165,
-    "name": "Shadowscale Greaves"
-  },
-  "172263": {
-    "itemLevel": 165,
-    "name": "Shadowscale Pauldrons"
+    "name": "Shadowscale Waistguard"
   },
   "172314": {
     "itemLevel": 175,
@@ -283,18 +215,6 @@
     "itemLevel": 165,
     "name": "Flexible Ectoplasmic Specs"
   },
-  "172906": {
-    "itemLevel": 165,
-    "name": "Grounded Ectoplasmic Specs"
-  },
-  "172907": {
-    "itemLevel": 165,
-    "name": "Articulated Ectoplasmic Specs"
-  },
-  "172908": {
-    "itemLevel": 165,
-    "name": "Reinforced Ectoplasmic Specs"
-  },
   "173131": {
     "itemLevel": 151,
     "name": "Versatile Solenium Ring"
@@ -355,6 +275,10 @@
     "itemLevel": 165,
     "name": "Shadowlace Mantle"
   },
+  "173221": {
+    "itemLevel": 165,
+    "name": "Shadowlace Cord"
+  },
   "173222": {
     "itemLevel": 165,
     "name": "Shadowlace Cuffs"
@@ -395,33 +319,9 @@
     "itemLevel": 175,
     "name": "Grim-Veiled Bracers"
   },
-  "173433": {
-    "itemLevel": 78,
-    "name": "Vile Manipulator's Cowl"
-  },
-  "173844": {
-    "itemLevel": 78,
-    "name": "Vile Manipulator's Amice"
-  },
-  "174292": {
-    "itemLevel": 150,
-    "name": "Selfless Collector's Gauntlets"
-  },
-  "175888": {
-    "itemLevel": 200,
-    "name": "Sinful Gladiator's Cloak"
-  },
-  "175890": {
-    "itemLevel": 200,
-    "name": "Sinful Gladiator's Plate Chestguard"
-  },
   "175893": {
     "itemLevel": 200,
     "name": "Sinful Gladiator's Plate Warboots"
-  },
-  "175894": {
-    "itemLevel": 200,
-    "name": "Sinful Gladiator's Silk Slippers"
   },
   "175898": {
     "itemLevel": 200,
@@ -431,13 +331,13 @@
     "itemLevel": 200,
     "name": "Sinful Gladiator's Plate Shoulders"
   },
+  "175913": {
+    "itemLevel": 200,
+    "name": "Sinful Gladiator's Silk Cord"
+  },
   "175916": {
     "itemLevel": 200,
     "name": "Sinful Gladiator's Ring"
-  },
-  "175917": {
-    "itemLevel": 200,
-    "name": "Sinful Gladiator's Silk Wristwraps"
   },
   "175918": {
     "itemLevel": 200,
@@ -455,49 +355,25 @@
     "itemLevel": 200,
     "name": "Sinful Gladiator's Drape"
   },
-  "178358": {
+  "178355": {
     "itemLevel": 200,
-    "name": "Sinful Gladiator's Plate Stompers"
+    "name": "Sinful Gladiator's Plate Chestplate"
   },
-  "178361": {
+  "178369": {
     "itemLevel": 200,
-    "name": "Sinful Gladiator's Leather Treads"
-  },
-  "178363": {
-    "itemLevel": 200,
-    "name": "Sinful Gladiator's Plate Handguards"
+    "name": "Sinful Gladiator's Plate Wargreaves"
   },
   "178377": {
     "itemLevel": 200,
     "name": "Sinful Gladiator's Plate Greatbelt"
   },
-  "178379": {
-    "itemLevel": 200,
-    "name": "Sinful Gladiator's Chain Girdle"
-  },
   "178381": {
     "itemLevel": 200,
     "name": "Sinful Gladiator's Band"
   },
-  "178382": {
-    "itemLevel": 200,
-    "name": "Sinful Gladiator's Silk Armbands"
-  },
   "178386": {
     "itemLevel": 200,
     "name": "Sinful Gladiator's Insignia of Alacrity"
-  },
-  "178387": {
-    "itemLevel": 200,
-    "name": "Sinful Gladiator's Pendant"
-  },
-  "178442": {
-    "itemLevel": 200,
-    "name": "Sinful Gladiator's Signet"
-  },
-  "178447": {
-    "itemLevel": 200,
-    "name": "Sinful Gladiator's Emblem"
   },
   "178691": {
     "itemLevel": 158,
@@ -515,21 +391,9 @@
     "itemLevel": 158,
     "name": "Wrathbark Greathelm"
   },
-  "178695": {
-    "itemLevel": 158,
-    "name": "Wintersnap Shoulderguards"
-  },
-  "178696": {
-    "itemLevel": 158,
-    "name": "Ingra Maloch's Mantle"
-  },
   "178697": {
     "itemLevel": 158,
     "name": "Prankster's Pauldrons"
-  },
-  "178698": {
-    "itemLevel": 158,
-    "name": "Rainshadow Hauberk"
   },
   "178699": {
     "itemLevel": 158,
@@ -547,10 +411,6 @@
     "itemLevel": 158,
     "name": "Bands of the Undergrowth"
   },
-  "178703": {
-    "itemLevel": 158,
-    "name": "Hiveswarm Bracers"
-  },
   "178704": {
     "itemLevel": 158,
     "name": "Deathshackle Wristwraps"
@@ -558,10 +418,6 @@
   "178705": {
     "itemLevel": 158,
     "name": "Tricksprite Gloves"
-  },
-  "178706": {
-    "itemLevel": 158,
-    "name": "Fogweaver Gauntlets"
   },
   "178707": {
     "itemLevel": 158,
@@ -595,10 +451,6 @@
     "itemLevel": 158,
     "name": "Lakali's Spire of Knowledge"
   },
-  "178715": {
-    "itemLevel": 158,
-    "name": "Mistcaller Ocarina"
-  },
   "178730": {
     "itemLevel": 158,
     "name": "Engorged Worm Smasher"
@@ -606,10 +458,6 @@
   "178731": {
     "itemLevel": 158,
     "name": "Viscera-Stitched Footpads"
-  },
-  "178732": {
-    "itemLevel": 158,
-    "name": "Abominable Visage"
   },
   "178733": {
     "itemLevel": 158,
@@ -635,10 +483,6 @@
     "itemLevel": 158,
     "name": "Rattling Deadeye Hood"
   },
-  "178739": {
-    "itemLevel": 158,
-    "name": "Legplates of Unholy Frenzy"
-  },
   "178740": {
     "itemLevel": 158,
     "name": "Reanimator's Mantle"
@@ -651,14 +495,6 @@
     "itemLevel": 158,
     "name": "Bottled Flayedwing Toxin"
   },
-  "178743": {
-    "itemLevel": 158,
-    "name": "Stitchflesh's Scalpel"
-  },
-  "178744": {
-    "itemLevel": 158,
-    "name": "Freshly Embalmed Jerkin"
-  },
   "178745": {
     "itemLevel": 158,
     "name": "Striders of Restless Malice"
@@ -666,10 +502,6 @@
   "178748": {
     "itemLevel": 158,
     "name": "Gory Surgeon's Gloves"
-  },
-  "178749": {
-    "itemLevel": 158,
-    "name": "Vile Butcher's Pauldrons"
   },
   "178752": {
     "itemLevel": 158,
@@ -699,37 +531,13 @@
     "itemLevel": 158,
     "name": "Depraved Physician's Mask"
   },
-  "178760": {
-    "itemLevel": 158,
-    "name": "Digested Interrogator's Gaze"
-  },
   "178761": {
     "itemLevel": 158,
     "name": "Leggings of the Erudite Scholar"
   },
-  "178762": {
-    "itemLevel": 158,
-    "name": "Blightborne Chain Legguards"
-  },
-  "178763": {
-    "itemLevel": 158,
-    "name": "Malodorous Gristle-Sown Spaulders"
-  },
-  "178764": {
-    "itemLevel": 158,
-    "name": "Plagueborne Shoulderguards"
-  },
-  "178767": {
-    "itemLevel": 158,
-    "name": "Tortured Assistant's Bindings"
-  },
   "178769": {
     "itemLevel": 158,
     "name": "Infinitely Divisible Ooze"
-  },
-  "178770": {
-    "itemLevel": 158,
-    "name": "Slimy Consumptive Organ"
   },
   "178771": {
     "itemLevel": 158,
@@ -747,17 +555,9 @@
     "itemLevel": 158,
     "name": "Muckwallow Stompers"
   },
-  "178775": {
-    "itemLevel": 158,
-    "name": "Fleshfused Crushers"
-  },
   "178777": {
     "itemLevel": 158,
     "name": "Darkfrost Helmet"
-  },
-  "178778": {
-    "itemLevel": 158,
-    "name": "Lichbone Legguards"
   },
   "178779": {
     "itemLevel": 158,
@@ -775,6 +575,10 @@
     "itemLevel": 158,
     "name": "Necropolis Lord's Shackles"
   },
+  "178783": {
+    "itemLevel": 158,
+    "name": "Siphoning Phylactery Shard"
+  },
   "178789": {
     "itemLevel": 158,
     "name": "Fleshcrafter's Knife"
@@ -782,18 +586,6 @@
   "178792": {
     "itemLevel": 158,
     "name": "Soulsewn Vestments"
-  },
-  "178793": {
-    "itemLevel": 158,
-    "name": "Abdominal Securing Chestguard"
-  },
-  "178794": {
-    "itemLevel": 158,
-    "name": "Triumphant Combatant's Chainmail"
-  },
-  "178795": {
-    "itemLevel": 158,
-    "name": "Vest of Concealed Secrets"
   },
   "178796": {
     "itemLevel": 158,
@@ -807,10 +599,6 @@
     "itemLevel": 158,
     "name": "Grips of Overwhelming Beatings"
   },
-  "178800": {
-    "itemLevel": 158,
-    "name": "Galvanized Oxxein Legguards"
-  },
   "178801": {
     "itemLevel": 158,
     "name": "Fearless Challenger's Leggings"
@@ -818,10 +606,6 @@
   "178802": {
     "itemLevel": 158,
     "name": "Unyielding Combatant's Pauldrons"
-  },
-  "178803": {
-    "itemLevel": 158,
-    "name": "Plague-Licked Amice"
   },
   "178804": {
     "itemLevel": 158,
@@ -839,10 +623,6 @@
     "itemLevel": 158,
     "name": "Pit Fighter's Wristguards"
   },
-  "178808": {
-    "itemLevel": 158,
-    "name": "Viscera of Coalesced Hatred"
-  },
   "178809": {
     "itemLevel": 158,
     "name": "Soulletting Ruby"
@@ -851,33 +631,13 @@
     "itemLevel": 158,
     "name": "Grim Codex"
   },
-  "178812": {
-    "itemLevel": 158,
-    "name": "Wing Commander's Helmet"
-  },
   "178813": {
     "itemLevel": 158,
     "name": "Sinlight Shroud"
   },
-  "178814": {
-    "itemLevel": 158,
-    "name": "Breastplate of Otherworldly Influence"
-  },
-  "178815": {
-    "itemLevel": 158,
-    "name": "Soaring Decimator's Hauberk"
-  },
-  "178816": {
-    "itemLevel": 158,
-    "name": "Nathrian Usurper's Mask"
-  },
   "178817": {
     "itemLevel": 158,
     "name": "Hood of Refracted Shadows"
-  },
-  "178818": {
-    "itemLevel": 158,
-    "name": "Halkias's Towering Pillars"
   },
   "178819": {
     "itemLevel": 158,
@@ -886,10 +646,6 @@
   "178820": {
     "itemLevel": 158,
     "name": "Pauldrons of Unleashed Pride"
-  },
-  "178821": {
-    "itemLevel": 158,
-    "name": "Mantle of Ephemeral Visages"
   },
   "178822": {
     "itemLevel": 158,
@@ -902,6 +658,10 @@
   "178824": {
     "itemLevel": 158,
     "name": "Signet of the False Accuser"
+  },
+  "178826": {
+    "itemLevel": 158,
+    "name": "Sunblood Amethyst"
   },
   "178827": {
     "itemLevel": 158,
@@ -951,22 +711,6 @@
     "itemLevel": 158,
     "name": "Beryllia's Leggings of Endless Torment"
   },
-  "178839": {
-    "itemLevel": 158,
-    "name": "Wind Dancer's Legguards"
-  },
-  "178840": {
-    "itemLevel": 158,
-    "name": "Guilewind Stone Talons"
-  },
-  "178841": {
-    "itemLevel": 158,
-    "name": "Iron Spiked Handgrips"
-  },
-  "178842": {
-    "itemLevel": 158,
-    "name": "Waistguard of Expurged Anguish"
-  },
   "178843": {
     "itemLevel": 158,
     "name": "Executor's Prideful Girdle"
@@ -991,10 +735,6 @@
     "itemLevel": 158,
     "name": "Entwined Gorger Tendril"
   },
-  "178850": {
-    "itemLevel": 158,
-    "name": "Lingering Sunmote"
-  },
   "178851": {
     "itemLevel": 158,
     "name": "Cloak of Enveloping Manifestations"
@@ -1015,10 +755,6 @@
     "itemLevel": 158,
     "name": "Sinsmasher"
   },
-  "178856": {
-    "itemLevel": 158,
-    "name": "Kaal's Gloomblade"
-  },
   "178857": {
     "itemLevel": 158,
     "name": "Stone General's Edge"
@@ -1031,10 +767,6 @@
     "itemLevel": 158,
     "name": "Castigator's Mantle"
   },
-  "178860": {
-    "itemLevel": 158,
-    "name": "Cowl of the Devoted General"
-  },
   "178861": {
     "itemLevel": 158,
     "name": "Decanter of Anima-Charged Winds"
@@ -1046,6 +778,10 @@
   "178864": {
     "itemLevel": 158,
     "name": "Gorebound Predator's Gavel"
+  },
+  "178865": {
+    "itemLevel": 158,
+    "name": "Xav's Pike of Authority"
   },
   "178866": {
     "itemLevel": 158,
@@ -1083,6 +819,10 @@
     "itemLevel": 175,
     "name": "Shadowghast Necklace"
   },
+  "178928": {
+    "itemLevel": 158,
+    "name": "Domina's Oozing Shiv"
+  },
   "178929": {
     "itemLevel": 158,
     "name": "Halberd of the Aranakk"
@@ -1094,10 +834,6 @@
   "178931": {
     "itemLevel": 158,
     "name": "Scarred Bloodbound Girdle"
-  },
-  "178932": {
-    "itemLevel": 158,
-    "name": "Belt of Wretched Manipulations"
   },
   "178933": {
     "itemLevel": 158,
@@ -1135,17 +871,9 @@
     "itemLevel": 158,
     "name": "Blood-Spattered Scale"
   },
-  "179335": {
-    "itemLevel": 158,
-    "name": "Manastorm's Magnificent Threads"
-  },
   "179336": {
     "itemLevel": 158,
     "name": "Rocket Chicken Handlers"
-  },
-  "179337": {
-    "itemLevel": 158,
-    "name": "Techno-Coil Legguards"
   },
   "179338": {
     "itemLevel": 158,
@@ -1203,10 +931,6 @@
     "itemLevel": 158,
     "name": "Primeval Soul's Ankleguards"
   },
-  "179353": {
-    "itemLevel": 158,
-    "name": "Harness of Twisted Whims"
-  },
   "179354": {
     "itemLevel": 158,
     "name": "Reality-Shatter Vambraces"
@@ -1218,10 +942,6 @@
   "179356": {
     "itemLevel": 158,
     "name": "Shadowgrasp Totem"
-  },
-  "180004": {
-    "itemLevel": 200,
-    "name": "Sinful Gladiator's Staff"
   },
   "180095": {
     "itemLevel": 158,
@@ -1235,14 +955,6 @@
     "itemLevel": 158,
     "name": "Quarterstaff of Discordant Ethic"
   },
-  "180098": {
-    "itemLevel": 158,
-    "name": "Sinister Requiem Vestments"
-  },
-  "180099": {
-    "itemLevel": 158,
-    "name": "Breastplate of Brutal Dissonance"
-  },
   "180100": {
     "itemLevel": 158,
     "name": "Forsworn Stalker's Hauberk"
@@ -1254,22 +966,6 @@
   "180102": {
     "itemLevel": 158,
     "name": "Dark Stride Footwraps"
-  },
-  "180103": {
-    "itemLevel": 158,
-    "name": "Winged Hunters' Gloves"
-  },
-  "180104": {
-    "itemLevel": 158,
-    "name": "Distorted Construct's Gauntlets"
-  },
-  "180105": {
-    "itemLevel": 158,
-    "name": "Absonant Construct's Handguards"
-  },
-  "180106": {
-    "itemLevel": 158,
-    "name": "Vicious Surge Faceguard"
   },
   "180107": {
     "itemLevel": 158,
@@ -1291,10 +987,6 @@
     "itemLevel": 158,
     "name": "Shadowhirl Waistwrap"
   },
-  "180112": {
-    "itemLevel": 158,
-    "name": "The Philosopher"
-  },
   "180113": {
     "itemLevel": 158,
     "name": "Thunderous Echo Vambraces"
@@ -1315,6 +1007,10 @@
     "itemLevel": 158,
     "name": "Empyreal Ordnance"
   },
+  "180118": {
+    "itemLevel": 158,
+    "name": "Anima Field Emitter"
+  },
   "180119": {
     "itemLevel": 158,
     "name": "Boon of the Archon"
@@ -1323,69 +1019,17 @@
     "itemLevel": 158,
     "name": "Drape of Twisted Loyalties"
   },
-  "180136": {
-    "itemLevel": 40,
-    "name": "\"The Brokers Angle'r\""
-  },
-  "180313": {
-    "itemLevel": 200,
-    "name": "Sinful Gladiator's Greatmallet"
-  },
   "181333": {
     "itemLevel": 200,
     "name": "Sinful Gladiator's Medallion"
   },
-  "181335": {
+  "182402": {
     "itemLevel": 200,
-    "name": "Sinful Gladiator's Relentless Brooch"
+    "name": "Sinful Gladiator's Crusaderblade"
   },
-  "181457": {
-    "itemLevel": 148,
-    "name": "Wakener's Frond"
-  },
-  "181688": {
-    "itemLevel": 148,
-    "name": "Gorewrought Stave"
-  },
-  "182403": {
+  "183022": {
     "itemLevel": 200,
-    "name": "Sinful Gladiator's Gargoyle Claw"
-  },
-  "183031": {
-    "itemLevel": 200,
-    "name": "Soldier's Stoneband Wristguards"
-  },
-  "183035": {
-    "itemLevel": 200,
-    "name": "Ardent Sunstar Signet"
-  },
-  "183038": {
-    "itemLevel": 200,
-    "name": "Hyperlight Band"
-  },
-  "184018": {
-    "itemLevel": 200,
-    "name": "Splintered Heart of Al'ar"
-  },
-  "184025": {
-    "itemLevel": 200,
-    "name": "Memory of Past Sins"
-  },
-  "184028": {
-    "itemLevel": 207,
-    "name": "Cabalist's Hymnal"
-  },
-  "184030": {
-    "itemLevel": 207,
-    "name": "Dreadfire Vessel"
-  },
-  "184052": {
-    "itemLevel": 158,
-    "name": "Sinful Aspirant's Medallion"
-  },
-  "184842": {
-    "itemLevel": 148,
-    "name": "Instructor's Divine Bell"
+    "name": "Impossibly Oversized Mitts"
   },
   "185125": {
     "itemLevel": 200,
@@ -1394,10 +1038,6 @@
   "185126": {
     "itemLevel": 200,
     "name": "Unchained Gladiator's Guard"
-  },
-  "185161": {
-    "itemLevel": 158,
-    "name": "Unchained Aspirant's Badge of Ferocity"
   },
   "185163": {
     "itemLevel": 200,
@@ -1454,10 +1094,6 @@
   "185176": {
     "itemLevel": 200,
     "name": "Unchained Gladiator's Chain Gauntlets"
-  },
-  "185177": {
-    "itemLevel": 200,
-    "name": "Unchained Gladiator's Silk Hood"
   },
   "185178": {
     "itemLevel": 200,
@@ -1563,14 +1199,6 @@
     "itemLevel": 200,
     "name": "Unchained Gladiator's Chalice"
   },
-  "185238": {
-    "itemLevel": 158,
-    "name": "Unchained Aspirant's Insignia of Alacrity"
-  },
-  "185242": {
-    "itemLevel": 158,
-    "name": "Unchained Aspirant's Emblem"
-  },
   "185244": {
     "itemLevel": 200,
     "name": "Unchained Gladiator's Plate Helmet"
@@ -1619,10 +1247,6 @@
     "itemLevel": 200,
     "name": "Unchained Gladiator's Plate Handguards"
   },
-  "185256": {
-    "itemLevel": 200,
-    "name": "Unchained Gladiator's Silk Handwraps"
-  },
   "185257": {
     "itemLevel": 200,
     "name": "Unchained Gladiator's Chain Handguards"
@@ -1663,10 +1287,6 @@
     "itemLevel": 200,
     "name": "Unchained Gladiator's Plate Pauldrons"
   },
-  "185267": {
-    "itemLevel": 200,
-    "name": "Unchained Gladiator's Silk Amice"
-  },
   "185268": {
     "itemLevel": 200,
     "name": "Unchained Gladiator's Chain Shoulderguard"
@@ -1674,10 +1294,6 @@
   "185269": {
     "itemLevel": 200,
     "name": "Unchained Gladiator's Plate Greatbelt"
-  },
-  "185270": {
-    "itemLevel": 200,
-    "name": "Unchained Gladiator's Silk Belt"
   },
   "185271": {
     "itemLevel": 200,
@@ -1747,25 +1363,13 @@
     "itemLevel": 200,
     "name": "Unchained Gladiator's Relentless Brooch"
   },
-  "185306": {
-    "itemLevel": 200,
-    "name": "Unchained Gladiator's Sigil of Adaptation"
-  },
   "185309": {
     "itemLevel": 158,
     "name": "Unchained Aspirant's Medallion"
   },
-  "185312": {
-    "itemLevel": 200,
-    "name": "Unchained Gladiator's Warglaive"
-  },
   "185313": {
     "itemLevel": 200,
     "name": "Unchained Gladiator's Greatcloak"
-  },
-  "185314": {
-    "itemLevel": 200,
-    "name": "Unchained Gladiator's Hacker"
   },
   "185315": {
     "itemLevel": 200,
@@ -1783,17 +1387,29 @@
     "itemLevel": 155,
     "name": "Hooktail's Commanding Gaze"
   },
+  "185777": {
+    "itemLevel": 155,
+    "name": "Fang of Alcruux"
+  },
+  "185778": {
+    "itemLevel": 155,
+    "name": "First Fist of the So Cartel"
+  },
+  "185780": {
+    "itemLevel": 155,
+    "name": "Interrogator's Flensing Blade"
+  },
   "185781": {
     "itemLevel": 155,
     "name": "Drape of Titanic Dreams"
   },
+  "185782": {
+    "itemLevel": 155,
+    "name": "Robes of Midnight Bargains"
+  },
   "185783": {
     "itemLevel": 155,
     "name": "Yasahm the Riftbreaker"
-  },
-  "185784": {
-    "itemLevel": 155,
-    "name": "Novaburst Warplate"
   },
   "185785": {
     "itemLevel": 155,
@@ -1803,6 +1419,22 @@
     "itemLevel": 155,
     "name": "Implacable Weatherproof Treads"
   },
+  "185788": {
+    "itemLevel": 155,
+    "name": "Codebreaker's Cunning Sandals"
+  },
+  "185789": {
+    "itemLevel": 155,
+    "name": "Sabatons of Measured Time"
+  },
+  "185790": {
+    "itemLevel": 155,
+    "name": "Treads of Titanic Deconversion"
+  },
+  "185793": {
+    "itemLevel": 155,
+    "name": "Cyphered Gloves"
+  },
   "185794": {
     "itemLevel": 155,
     "name": "Gavel Pounders"
@@ -1811,17 +1443,13 @@
     "itemLevel": 155,
     "name": "Dragonbane Diadem"
   },
-  "185797": {
+  "185798": {
     "itemLevel": 155,
-    "name": "Rakishly Tipped Tricorne"
+    "name": "Quantum Leapers"
   },
-  "185799": {
+  "185803": {
     "itemLevel": 155,
-    "name": "Hyperlight Leggings"
-  },
-  "185802": {
-    "itemLevel": 155,
-    "name": "Breakbeat Shoulderguards"
+    "name": "Stoneflesh Spaulders"
   },
   "185804": {
     "itemLevel": 155,
@@ -1843,21 +1471,41 @@
     "itemLevel": 155,
     "name": "Discount Mail-Order Belt"
   },
+  "185809": {
+    "itemLevel": 155,
+    "name": "Venza's Powderbelt"
+  },
+  "185810": {
+    "itemLevel": 155,
+    "name": "Skyreaver, Greataxe of the Keepers"
+  },
+  "185811": {
+    "itemLevel": 155,
+    "name": "Package Protector"
+  },
+  "185812": {
+    "itemLevel": 155,
+    "name": "Acoustically Alluring Censer"
+  },
   "185813": {
     "itemLevel": 155,
     "name": "Signet of Collapsing Stars"
   },
+  "185814": {
+    "itemLevel": 155,
+    "name": "Auctioneer's Counting Bracers"
+  },
+  "185815": {
+    "itemLevel": 155,
+    "name": "Vambraces of Verification"
+  },
+  "185816": {
+    "itemLevel": 155,
+    "name": "Confiscated Bracers of Concealment"
+  },
   "185817": {
     "itemLevel": 155,
     "name": "Bracers of Autonomous Classification"
-  },
-  "185818": {
-    "itemLevel": 155,
-    "name": "So'leah's Secret Technique"
-  },
-  "185819": {
-    "itemLevel": 155,
-    "name": "Event Horizon's Edge"
   },
   "185820": {
     "itemLevel": 155,
@@ -1875,9 +1523,21 @@
     "itemLevel": 155,
     "name": "Fatebreaker, Destroyer of Futures"
   },
+  "185824": {
+    "itemLevel": 155,
+    "name": "Blade of Grievous Harm"
+  },
+  "185836": {
+    "itemLevel": 155,
+    "name": "Codex of the First Technique"
+  },
   "185840": {
     "itemLevel": 155,
     "name": "Seal of the Panoply"
+  },
+  "185841": {
+    "itemLevel": 155,
+    "name": "Timetwister Tulwar"
   },
   "185842": {
     "itemLevel": 155,
@@ -1887,45 +1547,17 @@
     "itemLevel": 155,
     "name": "Duplicating Drape"
   },
-  "185844": {
+  "185845": {
     "itemLevel": 155,
-    "name": "Ticking Sack of Terror"
+    "name": "First Class Healing Distributor"
   },
-  "185894": {
-    "itemLevel": 200,
-    "name": "Attendant's Loop"
-  },
-  "185905": {
-    "itemLevel": 200,
-    "name": "Vault Guardian's Drape"
-  },
-  "186281": {
-    "itemLevel": 226,
-    "name": "Phantasma-Forged Striders"
+  "185846": {
+    "itemLevel": 155,
+    "name": "Miniscule Mailemental in an Envelope"
   },
   "186282": {
     "itemLevel": 226,
     "name": "Sacrificer's Sacramental Cassock"
-  },
-  "186283": {
-    "itemLevel": 226,
-    "name": "Cruel Overlord's Shackles"
-  },
-  "186284": {
-    "itemLevel": 226,
-    "name": "Enigmatic Energy Circuit"
-  },
-  "186285": {
-    "itemLevel": 226,
-    "name": "Sorcerer's Headlong Legwraps"
-  },
-  "186286": {
-    "itemLevel": 226,
-    "name": "Mantle of Arthura's Chosen"
-  },
-  "186287": {
-    "itemLevel": 226,
-    "name": "Hood of Vengeful Possession"
   },
   "186288": {
     "itemLevel": 226,
@@ -1943,117 +1575,25 @@
     "itemLevel": 226,
     "name": "Periapt of Pristine Preservation"
   },
-  "186292": {
-    "itemLevel": 226,
-    "name": "Cap of Writhing Malevolence"
-  },
-  "186293": {
-    "itemLevel": 226,
-    "name": "Flameclasp-Scorched Legguards"
-  },
-  "186294": {
-    "itemLevel": 226,
-    "name": "Agonizing Spiked Belt"
-  },
-  "186295": {
-    "itemLevel": 226,
-    "name": "Loyal Kvaldir's Handwraps"
-  },
-  "186296": {
-    "itemLevel": 226,
-    "name": "Mawsworn Eviscerator's Cuirass"
-  },
-  "186297": {
-    "itemLevel": 226,
-    "name": "Clasps of the Unfortunate Troubadour"
-  },
-  "186298": {
-    "itemLevel": 226,
-    "name": "Smuggler's Plundered Pauldrons"
-  },
-  "186299": {
-    "itemLevel": 226,
-    "name": "Daschla's Defiant Treads"
-  },
-  "186301": {
-    "itemLevel": 226,
-    "name": "Coiled Stygian Grapnel"
-  },
   "186302": {
     "itemLevel": 226,
     "name": "Mistwrap Manacles"
-  },
-  "186303": {
-    "itemLevel": 226,
-    "name": "Colossus Slayer's Hauberk"
-  },
-  "186304": {
-    "itemLevel": 226,
-    "name": "Crest of the Fallen"
-  },
-  "186305": {
-    "itemLevel": 226,
-    "name": "Pauldrons of Tyrannical Defiance"
   },
   "186306": {
     "itemLevel": 226,
     "name": "Greaves of Extermination"
   },
-  "186307": {
-    "itemLevel": 226,
-    "name": "Aradne's Lancer Legguards"
-  },
-  "186308": {
-    "itemLevel": 226,
-    "name": "Grasps of Ancestral Whispers"
-  },
-  "186311": {
-    "itemLevel": 226,
-    "name": "Cavalier Oathbreaker's Grasps"
-  },
   "186312": {
     "itemLevel": 226,
     "name": "Cuirass of the Lonely Citadel"
-  },
-  "186313": {
-    "itemLevel": 226,
-    "name": "Agatha's Gothic Greaves"
-  },
-  "186314": {
-    "itemLevel": 226,
-    "name": "Ruinous Warchief's Shoulderguards"
-  },
-  "186315": {
-    "itemLevel": 226,
-    "name": "Dark Tormentor's Gaze"
-  },
-  "186316": {
-    "itemLevel": 226,
-    "name": "Airborne Abductor's Vambraces"
   },
   "186317": {
     "itemLevel": 226,
     "name": "Disintegration-Proof Waistband"
   },
-  "186318": {
-    "itemLevel": 226,
-    "name": "Champion's Gruesome Greaves"
-  },
-  "186319": {
-    "itemLevel": 226,
-    "name": "Tormented Shadowcleft Boots"
-  },
-  "186320": {
-    "itemLevel": 226,
-    "name": "Diviner's Draped Finery"
-  },
   "186321": {
     "itemLevel": 233,
     "name": "Desecrator's Keening Wristwraps"
-  },
-  "186322": {
-    "itemLevel": 233,
-    "name": "Sash of Duplicitous Magics"
   },
   "186323": {
     "itemLevel": 226,
@@ -2067,85 +1607,9 @@
     "itemLevel": 233,
     "name": "Veil of the Banshee Queen"
   },
-  "186326": {
-    "itemLevel": 226,
-    "name": "Gloves of Forsaken Purpose"
-  },
-  "186330": {
-    "itemLevel": 226,
-    "name": "Cowl of Haunting Precognition"
-  },
-  "186331": {
-    "itemLevel": 233,
-    "name": "Elite Aranakk Breeches"
-  },
   "186332": {
     "itemLevel": 233,
     "name": "Windrunner's Baldric"
-  },
-  "186333": {
-    "itemLevel": 226,
-    "name": "Hangman's Knotbinders"
-  },
-  "186334": {
-    "itemLevel": 233,
-    "name": "Witherheart Studded Breastplate"
-  },
-  "186335": {
-    "itemLevel": 226,
-    "name": "Fate-Threaded Bindings"
-  },
-  "186336": {
-    "itemLevel": 233,
-    "name": "Spaulders of the Crooked Confidant"
-  },
-  "186337": {
-    "itemLevel": 226,
-    "name": "Trenchant Warmonger Treads"
-  },
-  "186338": {
-    "itemLevel": 233,
-    "name": "Ceremonial Construct Clasp"
-  },
-  "186339": {
-    "itemLevel": 226,
-    "name": "Brynja's Mournful Wristwraps"
-  },
-  "186340": {
-    "itemLevel": 226,
-    "name": "Conjunction-Forged Chainmail"
-  },
-  "186341": {
-    "itemLevel": 226,
-    "name": "Shadowsteel Facecage"
-  },
-  "186342": {
-    "itemLevel": 233,
-    "name": "Epaulettes of the Master Ranger"
-  },
-  "186343": {
-    "itemLevel": 226,
-    "name": "Ragebound Leg Irons"
-  },
-  "186344": {
-    "itemLevel": 226,
-    "name": "Hyperdense Greaves"
-  },
-  "186345": {
-    "itemLevel": 226,
-    "name": "Demigaunts of Predestination"
-  },
-  "186346": {
-    "itemLevel": 226,
-    "name": "Kyra's Unending Protectors"
-  },
-  "186347": {
-    "itemLevel": 226,
-    "name": "Ancient Colossus Chassis"
-  },
-  "186348": {
-    "itemLevel": 226,
-    "name": "Fateforged Legplates"
   },
   "186349": {
     "itemLevel": 233,
@@ -2159,10 +1623,6 @@
     "itemLevel": 233,
     "name": "Vyraz's Parade Cuffs"
   },
-  "186352": {
-    "itemLevel": 226,
-    "name": "Binding of Dark Destinies"
-  },
   "186353": {
     "itemLevel": 233,
     "name": "Greaves of Haunting Ruination"
@@ -2175,57 +1635,17 @@
     "itemLevel": 226,
     "name": "Forlorn Prisoner's Strap"
   },
-  "186358": {
-    "itemLevel": 226,
-    "name": "Soulcaster's Woven Grips"
-  },
-  "186359": {
-    "itemLevel": 226,
-    "name": "Scoundrel's Harrowed Leggings"
-  },
-  "186362": {
-    "itemLevel": 226,
-    "name": "Bindings of the Subjugated"
-  },
-  "186363": {
-    "itemLevel": 226,
-    "name": "Unstable Energizer Boots"
-  },
-  "186364": {
-    "itemLevel": 226,
-    "name": "Cord of Coerced Spirits"
-  },
   "186365": {
     "itemLevel": 233,
     "name": "Bands of the Fallen House"
-  },
-  "186367": {
-    "itemLevel": 226,
-    "name": "Bonded Soulsmelt Greaves"
-  },
-  "186369": {
-    "itemLevel": 226,
-    "name": "Guillotine Gauntlets"
   },
   "186371": {
     "itemLevel": 226,
     "name": "Ancient Brokensoul Bands"
   },
-  "186372": {
-    "itemLevel": 226,
-    "name": "Tormentor's Greatbelt"
-  },
-  "186373": {
-    "itemLevel": 226,
-    "name": "Towering Shadowghast Greatboots"
-  },
   "186374": {
     "itemLevel": 226,
     "name": "Self-Replicating Tissue"
-  },
-  "186375": {
-    "itemLevel": 226,
-    "name": "Miniature Breaking Wheel"
   },
   "186376": {
     "itemLevel": 226,
@@ -2235,113 +1655,17 @@
     "itemLevel": 233,
     "name": "Tarnished Insignia of Quel'Thalas"
   },
-  "186378": {
-    "itemLevel": 226,
-    "name": "Weathered Talisman of the Shadowmoon"
-  },
   "186379": {
     "itemLevel": 233,
     "name": "Interplanar Keystone"
-  },
-  "186381": {
-    "itemLevel": 226,
-    "name": "Elethium-Bladed Glaive"
-  },
-  "186383": {
-    "itemLevel": 226,
-    "name": "Gazepiercer"
-  },
-  "186384": {
-    "itemLevel": 226,
-    "name": "Skyja's Revenant Fury"
-  },
-  "186385": {
-    "itemLevel": 226,
-    "name": "Signe's Sonorous Scramaseax"
-  },
-  "186386": {
-    "itemLevel": 226,
-    "name": "Betrayer's Shadowspike"
-  },
-  "186387": {
-    "itemLevel": 226,
-    "name": "Dormazain's Tenderizer"
-  },
-  "186388": {
-    "itemLevel": 226,
-    "name": "Cruciform Veinripper"
-  },
-  "186391": {
-    "itemLevel": 226,
-    "name": "Shadowsteel Demoralizer"
-  },
-  "186392": {
-    "itemLevel": 226,
-    "name": "Exacting Mindslicer"
-  },
-  "186393": {
-    "itemLevel": 226,
-    "name": "Torch of Eternal Knowledge"
   },
   "186398": {
     "itemLevel": 233,
     "name": "Edge of Night"
   },
-  "186403": {
-    "itemLevel": 226,
-    "name": "Stygian Lance of Passage"
-  },
-  "186404": {
-    "itemLevel": 226,
-    "name": "Jotungeirr, Destiny's Call"
-  },
-  "186405": {
-    "itemLevel": 226,
-    "name": "Gnarled Staff of the Elder Shaman"
-  },
-  "186406": {
-    "itemLevel": 233,
-    "name": "Maledict Opus"
-  },
-  "186407": {
-    "itemLevel": 226,
-    "name": "Hellscream's Requiem"
-  },
-  "186409": {
-    "itemLevel": 226,
-    "name": "Pylon of the Great Purge"
-  },
-  "186410": {
-    "itemLevel": 233,
-    "name": "Jaithys, the Prison Blade"
-  },
-  "186411": {
-    "itemLevel": 226,
-    "name": "Soulrent Outrider's Recurve"
-  },
-  "186414": {
-    "itemLevel": 233,
-    "name": "Rae'shalare, Death's Whisper"
-  },
   "186415": {
     "itemLevel": 226,
     "name": "Moriaz's Spare Targe"
-  },
-  "186417": {
-    "itemLevel": 233,
-    "name": "Guard of the Sundered Defender"
-  },
-  "186418": {
-    "itemLevel": 226,
-    "name": "Guarm's Lost Chew Toy"
-  },
-  "186419": {
-    "itemLevel": 226,
-    "name": "Record of Collapsing Realities"
-  },
-  "186421": {
-    "itemLevel": 233,
-    "name": "Forbidden Necromantic Tome"
   },
   "186423": {
     "itemLevel": 226,
@@ -2359,18 +1683,6 @@
     "itemLevel": 226,
     "name": "Decanter of Endless Howling"
   },
-  "186430": {
-    "itemLevel": 226,
-    "name": "Tormented Rack Fragment"
-  },
-  "186431": {
-    "itemLevel": 226,
-    "name": "Ebonsoul Vise"
-  },
-  "186432": {
-    "itemLevel": 226,
-    "name": "Salvaged Fusion Amplifier"
-  },
   "186433": {
     "itemLevel": 226,
     "name": "Reactive Defense Matrix"
@@ -2378,10 +1690,6 @@
   "186434": {
     "itemLevel": 226,
     "name": "Weave of Warped Fates"
-  },
-  "186437": {
-    "itemLevel": 233,
-    "name": "Relic of the Frozen Wastes"
   },
   "186438": {
     "itemLevel": 233,
@@ -2439,6 +1747,18 @@
     "itemLevel": 200,
     "name": "Cosmic Gladiator's Amulet"
   },
+  "186790": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Silk Robe"
+  },
+  "186791": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Silk Vestments"
+  },
+  "186792": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Silk Slippers"
+  },
   "186793": {
     "itemLevel": 200,
     "name": "Cosmic Gladiator's Silk Treads"
@@ -2451,17 +1771,53 @@
     "itemLevel": 200,
     "name": "Cosmic Gladiator's Silk Handwraps"
   },
+  "186796": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Silk Hood"
+  },
+  "186797": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Silk Guise"
+  },
+  "186798": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Silk Leggings"
+  },
+  "186799": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Silk Trousers"
+  },
   "186800": {
     "itemLevel": 200,
     "name": "Cosmic Gladiator's Silk Mantle"
+  },
+  "186801": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Silk Amice"
   },
   "186802": {
     "itemLevel": 200,
     "name": "Cosmic Gladiator's Silk Cord"
   },
+  "186803": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Silk Belt"
+  },
+  "186804": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Silk Wristwraps"
+  },
   "186805": {
     "itemLevel": 200,
     "name": "Cosmic Gladiator's Silk Armbands"
+  },
+  "186806": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Leather Vest"
+  },
+  "186807": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Leather Jerkin"
   },
   "186808": {
     "itemLevel": 200,
@@ -2479,6 +1835,22 @@
     "itemLevel": 200,
     "name": "Cosmic Gladiator's Leather Grips"
   },
+  "186812": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Leather Helm"
+  },
+  "186813": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Leather Mask"
+  },
+  "186814": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Leather Breeches"
+  },
+  "186815": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Leather Legwraps"
+  },
   "186816": {
     "itemLevel": 200,
     "name": "Cosmic Gladiator's Leather Spaulders"
@@ -2487,6 +1859,10 @@
     "itemLevel": 200,
     "name": "Cosmic Gladiator's Leather Shoulderpads"
   },
+  "186818": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Leather Belt"
+  },
   "186819": {
     "itemLevel": 200,
     "name": "Cosmic Gladiator's Leather Strap"
@@ -2494,6 +1870,22 @@
   "186820": {
     "itemLevel": 200,
     "name": "Cosmic Gladiator's Leather Wristwraps"
+  },
+  "186821": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Leather Wristguards"
+  },
+  "186822": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Chain Vest"
+  },
+  "186823": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Chain Tunic"
+  },
+  "186824": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Chain Sabatons"
   },
   "186825": {
     "itemLevel": 200,
@@ -2506,6 +1898,22 @@
   "186827": {
     "itemLevel": 200,
     "name": "Cosmic Gladiator's Chain Handguards"
+  },
+  "186828": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Chain Helm"
+  },
+  "186829": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Chain Faceguard"
+  },
+  "186830": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Chain Leggings"
+  },
+  "186831": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Chain Breeches"
   },
   "186832": {
     "itemLevel": 200,
@@ -2531,6 +1939,14 @@
     "itemLevel": 200,
     "name": "Cosmic Gladiator's Chain Bracers"
   },
+  "186838": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Plate Chestguard"
+  },
+  "186839": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Plate Chestplate"
+  },
   "186840": {
     "itemLevel": 200,
     "name": "Cosmic Gladiator's Plate Warboots"
@@ -2546,6 +1962,22 @@
   "186843": {
     "itemLevel": 200,
     "name": "Cosmic Gladiator's Plate Handguards"
+  },
+  "186844": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Plate Helm"
+  },
+  "186845": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Plate Helmet"
+  },
+  "186846": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Plate Legguards"
+  },
+  "186847": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Plate Wargreaves"
   },
   "186848": {
     "itemLevel": 200,
@@ -2571,6 +2003,54 @@
     "itemLevel": 200,
     "name": "Cosmic Gladiator's Plate Vambraces"
   },
+  "186854": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Splitter"
+  },
+  "186855": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Hacker"
+  },
+  "186856": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Knife"
+  },
+  "186857": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Ritual Dagger"
+  },
+  "186858": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Gladius"
+  },
+  "186859": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Ceremonial Sword"
+  },
+  "186860": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Xiphos"
+  },
+  "186861": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Warglaive"
+  },
+  "186862": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Pulverizer"
+  },
+  "186863": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Ballista"
+  },
+  "186864": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Scythe"
+  },
+  "186865": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Vesper"
+  },
   "186866": {
     "itemLevel": 200,
     "name": "Cosmic Gladiator's Badge of Ferocity"
@@ -2579,9 +2059,21 @@
     "itemLevel": 200,
     "name": "Cosmic Gladiator's Insignia of Alacrity"
   },
+  "186868": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Emblem"
+  },
   "186869": {
     "itemLevel": 200,
     "name": "Cosmic Gladiator's Medallion"
+  },
+  "186870": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Relentless Brooch"
+  },
+  "186871": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Sigil of Adaptation"
   },
   "186872": {
     "itemLevel": 158,
@@ -2691,10 +2183,6 @@
     "itemLevel": 158,
     "name": "Cosmic Aspirant's Chain Belt"
   },
-  "186900": {
-    "itemLevel": 158,
-    "name": "Cosmic Aspirant's Leather Belt"
-  },
   "186901": {
     "itemLevel": 158,
     "name": "Cosmic Aspirant's Ring"
@@ -2702,10 +2190,6 @@
   "186903": {
     "itemLevel": 158,
     "name": "Cosmic Aspirant's Plate Cuffs"
-  },
-  "186904": {
-    "itemLevel": 158,
-    "name": "Cosmic Aspirant's Chain Wristwraps"
   },
   "186905": {
     "itemLevel": 158,
@@ -2727,10 +2211,6 @@
     "itemLevel": 158,
     "name": "Cosmic Aspirant's Drape"
   },
-  "186910": {
-    "itemLevel": 158,
-    "name": "Cosmic Aspirant's Silk Vest"
-  },
   "186911": {
     "itemLevel": 158,
     "name": "Cosmic Aspirant's Plate Armor"
@@ -2738,10 +2218,6 @@
   "186912": {
     "itemLevel": 158,
     "name": "Cosmic Aspirant's Chain Tunic"
-  },
-  "186913": {
-    "itemLevel": 158,
-    "name": "Cosmic Aspirant's Leather Tunic"
   },
   "186914": {
     "itemLevel": 158,
@@ -2759,17 +2235,9 @@
     "itemLevel": 158,
     "name": "Cosmic Aspirant's Leather Footpads"
   },
-  "186918": {
-    "itemLevel": 158,
-    "name": "Cosmic Aspirant's Leather Grips"
-  },
   "186919": {
     "itemLevel": 158,
     "name": "Cosmic Aspirant's Plate Handguards"
-  },
-  "186920": {
-    "itemLevel": 158,
-    "name": "Cosmic Aspirant's Silk Handwraps"
   },
   "186921": {
     "itemLevel": 158,
@@ -2783,10 +2251,6 @@
     "itemLevel": 158,
     "name": "Cosmic Aspirant's Chain Headguard"
   },
-  "186924": {
-    "itemLevel": 158,
-    "name": "Cosmic Aspirant's Leather Mask"
-  },
   "186925": {
     "itemLevel": 158,
     "name": "Cosmic Aspirant's Plate Wargreaves"
@@ -2798,10 +2262,6 @@
   "186928": {
     "itemLevel": 158,
     "name": "Cosmic Aspirant's Leather Leggings"
-  },
-  "186929": {
-    "itemLevel": 158,
-    "name": "Cosmic Aspirant's Leather Mantle"
   },
   "186930": {
     "itemLevel": 158,
@@ -2818,10 +2278,6 @@
   "186933": {
     "itemLevel": 158,
     "name": "Cosmic Aspirant's Plate Greatbelt"
-  },
-  "186935": {
-    "itemLevel": 158,
-    "name": "Cosmic Aspirant's Chain Clasp"
   },
   "186936": {
     "itemLevel": 158,
@@ -2875,17 +2331,9 @@
     "itemLevel": 158,
     "name": "Cosmic Aspirant's Dagger"
   },
-  "186950": {
-    "itemLevel": 158,
-    "name": "Cosmic Aspirant's Mace"
-  },
   "186951": {
     "itemLevel": 158,
     "name": "Cosmic Aspirant's Polearm"
-  },
-  "186952": {
-    "itemLevel": 158,
-    "name": "Cosmic Aspirant's Staff"
   },
   "186953": {
     "itemLevel": 158,
@@ -2903,29 +2351,9 @@
     "itemLevel": 158,
     "name": "Cosmic Aspirant's Orb"
   },
-  "186957": {
-    "itemLevel": 158,
-    "name": "Cosmic Aspirant's Warglaive"
-  },
   "186958": {
     "itemLevel": 158,
     "name": "Cosmic Aspirant's Gavel"
-  },
-  "186959": {
-    "itemLevel": 158,
-    "name": "Cosmic Aspirant's Barrier"
-  },
-  "186960": {
-    "itemLevel": 158,
-    "name": "Cosmic Aspirant's Hatchet"
-  },
-  "186961": {
-    "itemLevel": 158,
-    "name": "Cosmic Aspirant's Recurve"
-  },
-  "186962": {
-    "itemLevel": 158,
-    "name": "Cosmic Aspirant's Longspear"
   },
   "186963": {
     "itemLevel": 158,
@@ -2935,10 +2363,6 @@
     "itemLevel": 158,
     "name": "Cosmic Aspirant's Blackjack"
   },
-  "186965": {
-    "itemLevel": 158,
-    "name": "Cosmic Aspirant's Crescent"
-  },
   "186966": {
     "itemLevel": 158,
     "name": "Cosmic Aspirant's Medallion"
@@ -2947,117 +2371,49 @@
     "itemLevel": 158,
     "name": "Cosmic Aspirant's Relentless Brooch"
   },
-  "186976": {
-    "itemLevel": 200,
-    "name": "Fine Razorwing Quill"
-  },
   "186980": {
     "itemLevel": 220,
     "name": "Unchained Gladiator's Shackles"
   },
-  "187056": {
-    "itemLevel": 233,
-    "name": "The Devouring Cold"
-  },
-  "187392": {
+  "187400": {
     "itemLevel": 200,
-    "name": "Sabatons of the Towering Construct"
-  },
-  "187402": {
-    "itemLevel": 200,
-    "name": "All-Consuming Loop"
+    "name": "Mantle of Screaming Shadows"
   },
   "187447": {
     "itemLevel": 226,
     "name": "Soul Cage Fragment"
   },
-  "187534": {
+  "188039": {
     "itemLevel": 226,
-    "name": "Korthite Crystal Waistguard"
-  },
-  "187535": {
-    "itemLevel": 226,
-    "name": "Attendant Scholar's Waistcord"
-  },
-  "187540": {
-    "itemLevel": 226,
-    "name": "Cincture of Enveloping Death"
-  },
-  "188007": {
-    "itemLevel": 226,
-    "name": "Choral Slippers"
-  },
-  "188010": {
-    "itemLevel": 226,
-    "name": "Choral Leggings"
-  },
-  "188013": {
-    "itemLevel": 226,
-    "name": "Staccato Boots"
-  },
-  "188028": {
-    "itemLevel": 226,
-    "name": "Harmonium Breastplate"
-  },
-  "188029": {
-    "itemLevel": 226,
-    "name": "Harmonium Percussive Stompers"
-  },
-  "188030": {
-    "itemLevel": 226,
-    "name": "Harmonium Gauntlets"
-  },
-  "188031": {
-    "itemLevel": 226,
-    "name": "Harmonium Legplates"
-  },
-  "188032": {
-    "itemLevel": 226,
-    "name": "Harmonium Spaulders"
-  },
-  "188033": {
-    "itemLevel": 226,
-    "name": "Harmonium Girdle"
-  },
-  "188034": {
-    "itemLevel": 226,
-    "name": "Harmonium Vambrace"
-  },
-  "188043": {
-    "itemLevel": 226,
-    "name": "Eradicator of the Eternal Guard"
+    "name": "Harmonic Actuator"
   },
   "188044": {
     "itemLevel": 226,
     "name": "Discarded Cartel Al Signet"
   },
-  "188046": {
-    "itemLevel": 226,
-    "name": "Haven Guard's Mace"
-  },
-  "188047": {
-    "itemLevel": 226,
-    "name": "Haven Guard's Cudgel"
-  },
   "188050": {
     "itemLevel": 226,
     "name": "Ineffable Spire"
-  },
-  "188053": {
-    "itemLevel": 226,
-    "name": "Abandoned Automa Loop"
   },
   "188054": {
     "itemLevel": 226,
     "name": "Antecedent Drape"
   },
-  "188055": {
-    "itemLevel": 226,
-    "name": "Impossibly Ancient Band"
-  },
   "188106": {
     "itemLevel": 226,
     "name": "Unfathomable Pendant"
+  },
+  "188253": {
+    "itemLevel": 233,
+    "name": "Scars of Fraternal Strife"
+  },
+  "188254": {
+    "itemLevel": 233,
+    "name": "Grim Eclipse"
+  },
+  "188263": {
+    "itemLevel": 226,
+    "name": "Reclaimer's Intensity Core"
   },
   "188264": {
     "itemLevel": 226,
@@ -3078,6 +2434,10 @@
   "188271": {
     "itemLevel": 226,
     "name": "The First Sigil"
+  },
+  "188272": {
+    "itemLevel": 226,
+    "name": "Resonant Reservoir"
   },
   "188273": {
     "itemLevel": 226,
@@ -3103,17 +2463,9 @@
     "itemLevel": 200,
     "name": "Unchained Gladiator's Focus Staff"
   },
-  "188664": {
-    "itemLevel": 200,
-    "name": "Unchained Gladiator's Mageblade"
-  },
   "188665": {
     "itemLevel": 200,
     "name": "Unchained Gladiator's Slicer"
-  },
-  "188666": {
-    "itemLevel": 200,
-    "name": "Unchained Gladiator's Rifle"
   },
   "188668": {
     "itemLevel": 200,
@@ -3135,17 +2487,93 @@
     "itemLevel": 200,
     "name": "Cosmic Gladiator's Devouring Malediction"
   },
+  "188838": {
+    "itemLevel": 252,
+    "name": "Erudite Occultist's Treads"
+  },
+  "188839": {
+    "itemLevel": 252,
+    "name": "Erudite Occultist's Robes"
+  },
+  "188840": {
+    "itemLevel": 252,
+    "name": "Erudite Occultist's Bracers"
+  },
+  "188841": {
+    "itemLevel": 252,
+    "name": "Erudite Occultist's Cord"
+  },
   "188842": {
     "itemLevel": 252,
     "name": "Erudite Occultist's Leggings"
+  },
+  "188843": {
+    "itemLevel": 252,
+    "name": "Erudite Occultist's Mantle"
+  },
+  "188844": {
+    "itemLevel": 252,
+    "name": "Erudite Occultist's Hood"
+  },
+  "188845": {
+    "itemLevel": 252,
+    "name": "Erudite Occultist's Handwraps"
+  },
+  "188846": {
+    "itemLevel": 252,
+    "name": "Erudite Occultist's Shroud"
+  },
+  "188847": {
+    "itemLevel": 252,
+    "name": "Headpiece of the Fixed Stars"
   },
   "188848": {
     "itemLevel": 252,
     "name": "Leggings of the Fixed Stars"
   },
+  "188849": {
+    "itemLevel": 252,
+    "name": "Chestguard of the Fixed Stars"
+  },
+  "188850": {
+    "itemLevel": 252,
+    "name": "Bracers of the Fixed Stars"
+  },
+  "188851": {
+    "itemLevel": 252,
+    "name": "Shoulderpads of the Fixed Stars"
+  },
+  "188852": {
+    "itemLevel": 252,
+    "name": "Cincture of the Fixed Stars"
+  },
   "188853": {
     "itemLevel": 252,
     "name": "Handwraps of the Fixed Stars"
+  },
+  "188854": {
+    "itemLevel": 252,
+    "name": "Footwraps of the Fixed Stars"
+  },
+  "188855": {
+    "itemLevel": 252,
+    "name": "Godstalker's Wristwraps"
+  },
+  "188856": {
+    "itemLevel": 252,
+    "name": "Godstalker's Pauldrons"
+  },
+  "188857": {
+    "itemLevel": 252,
+    "name": "Godstalker's Fauld"
+  },
+  "188858": {
+    "itemLevel": 252,
+    "name": "Godstalker's Hauberk"
+  },
+  "188859": {
+    "itemLevel": 252,
+    "name": "Godstalker's Sallet"
   },
   "188860": {
     "itemLevel": 252,
@@ -3155,13 +2583,73 @@
     "itemLevel": 252,
     "name": "Godstalker's Gauntlets"
   },
+  "188862": {
+    "itemLevel": 252,
+    "name": "Godstalker's Sabatons"
+  },
   "188863": {
     "itemLevel": 252,
     "name": "Gauntlets of the First Eidolon"
   },
+  "188864": {
+    "itemLevel": 252,
+    "name": "Carapace of the First Eidolon"
+  },
+  "188865": {
+    "itemLevel": 252,
+    "name": "Greaves of the First Eidolon"
+  },
   "188866": {
     "itemLevel": 252,
     "name": "Chausses of the First Eidolon"
+  },
+  "188867": {
+    "itemLevel": 252,
+    "name": "Shoulderplates of the First Eidolon"
+  },
+  "188868": {
+    "itemLevel": 252,
+    "name": "Visage of the First Eidolon"
+  },
+  "188870": {
+    "itemLevel": 252,
+    "name": "Girdle of the First Eidolon"
+  },
+  "188871": {
+    "itemLevel": 252,
+    "name": "Wrap of the Fixed Stars"
+  },
+  "188872": {
+    "itemLevel": 252,
+    "name": "Godstalker's Camouflage"
+  },
+  "188873": {
+    "itemLevel": 252,
+    "name": "Cloak of the First Eidolon"
+  },
+  "188874": {
+    "itemLevel": 252,
+    "name": "Slippers of the Empyrean"
+  },
+  "188875": {
+    "itemLevel": 252,
+    "name": "Habit of the Empyrean"
+  },
+  "188876": {
+    "itemLevel": 252,
+    "name": "Bracelets of the Empyrean"
+  },
+  "188877": {
+    "itemLevel": 252,
+    "name": "Sash of the Empyrean"
+  },
+  "188878": {
+    "itemLevel": 252,
+    "name": "Leggings of the Empyrean"
+  },
+  "188879": {
+    "itemLevel": 252,
+    "name": "Capelet of the Empyrean"
   },
   "188880": {
     "itemLevel": 252,
@@ -3171,9 +2659,33 @@
     "itemLevel": 252,
     "name": "Caress of the Empyrean"
   },
+  "188882": {
+    "itemLevel": 252,
+    "name": "Drape of the Empyrean"
+  },
+  "188883": {
+    "itemLevel": 252,
+    "name": "Boots of the Demon Star"
+  },
+  "188884": {
+    "itemLevel": 252,
+    "name": "Robes of the Demon Star"
+  },
+  "188885": {
+    "itemLevel": 252,
+    "name": "Bangles of the Demon Star"
+  },
+  "188886": {
+    "itemLevel": 252,
+    "name": "Waistwrap of the Demon Star"
+  },
   "188887": {
     "itemLevel": 252,
     "name": "Leggings of the Demon Star"
+  },
+  "188888": {
+    "itemLevel": 252,
+    "name": "Mantle of the Demon Star"
   },
   "188889": {
     "itemLevel": 252,
@@ -3183,6 +2695,10 @@
     "itemLevel": 252,
     "name": "Grasps of the Demon Star"
   },
+  "188891": {
+    "itemLevel": 252,
+    "name": "Cape of the Demon Star"
+  },
   "188892": {
     "itemLevel": 252,
     "name": "Mercurial Punisher's Hood"
@@ -3191,9 +2707,25 @@
     "itemLevel": 252,
     "name": "Mercurial Punisher's Breeches"
   },
+  "188894": {
+    "itemLevel": 252,
+    "name": "Mercurial Punisher's Jerkin"
+  },
+  "188895": {
+    "itemLevel": 252,
+    "name": "Mercurial Punisher's Wristguards"
+  },
+  "188896": {
+    "itemLevel": 252,
+    "name": "Mercurial Punisher's Shoulderpads"
+  },
   "188898": {
     "itemLevel": 252,
     "name": "Mercurial Punisher's Grips"
+  },
+  "188899": {
+    "itemLevel": 252,
+    "name": "Mercurial Punisher's Boots"
   },
   "188901": {
     "itemLevel": 252,
@@ -3203,13 +2735,85 @@
     "itemLevel": 252,
     "name": "Soulblade Leggings"
   },
+  "188903": {
+    "itemLevel": 252,
+    "name": "Soulblade Leathers"
+  },
+  "188904": {
+    "itemLevel": 252,
+    "name": "Soulblade Wristguard"
+  },
+  "188905": {
+    "itemLevel": 252,
+    "name": "Soulblade Nightwings"
+  },
+  "188906": {
+    "itemLevel": 252,
+    "name": "Soulblade Baldric"
+  },
   "188907": {
     "itemLevel": 252,
     "name": "Soulblade Grasps"
   },
+  "188908": {
+    "itemLevel": 252,
+    "name": "Soulblade Footpads"
+  },
+  "188909": {
+    "itemLevel": 252,
+    "name": "Soulblade Cloak"
+  },
+  "188910": {
+    "itemLevel": 252,
+    "name": "Crown of the Grand Upwelling"
+  },
   "188911": {
     "itemLevel": 252,
     "name": "Legguards of the Grand Upwelling"
+  },
+  "188912": {
+    "itemLevel": 252,
+    "name": "Cuirass of the Grand Upwelling"
+  },
+  "188913": {
+    "itemLevel": 252,
+    "name": "Demigaunts of the Grand Upwelling"
+  },
+  "188914": {
+    "itemLevel": 252,
+    "name": "Tassets of the Grand Upwelling"
+  },
+  "188916": {
+    "itemLevel": 252,
+    "name": "Grips of the Grand Upwelling"
+  },
+  "188917": {
+    "itemLevel": 252,
+    "name": "Footwraps of the Grand Upwelling"
+  },
+  "188918": {
+    "itemLevel": 252,
+    "name": "Drape of the Grand Upwelling"
+  },
+  "188919": {
+    "itemLevel": 252,
+    "name": "Theurgic Starspeaker's Bracers"
+  },
+  "188920": {
+    "itemLevel": 252,
+    "name": "Theurgic Starspeaker's Adornment"
+  },
+  "188921": {
+    "itemLevel": 252,
+    "name": "Theurgic Starspeaker's Belt"
+  },
+  "188922": {
+    "itemLevel": 252,
+    "name": "Theurgic Starspeaker's Ringmail"
+  },
+  "188923": {
+    "itemLevel": 252,
+    "name": "Theurgic Starspeaker's Howl"
   },
   "188924": {
     "itemLevel": 252,
@@ -3219,29 +2823,121 @@
     "itemLevel": 252,
     "name": "Theurgic Starspeaker's Runebindings"
   },
+  "188926": {
+    "itemLevel": 252,
+    "name": "Theurgic Starspeaker's Sabatons"
+  },
+  "188927": {
+    "itemLevel": 252,
+    "name": "Theurgic Starspeaker's Shawl"
+  },
   "188928": {
     "itemLevel": 252,
     "name": "Luminous Chevalier's Gauntlets"
+  },
+  "188929": {
+    "itemLevel": 252,
+    "name": "Luminous Chevalier's Plackart"
+  },
+  "188930": {
+    "itemLevel": 252,
+    "name": "Luminous Chevalier's Spurs"
   },
   "188931": {
     "itemLevel": 252,
     "name": "Luminous Chevalier's Robes"
   },
+  "188932": {
+    "itemLevel": 252,
+    "name": "Luminous Chevalier's Epaulettes"
+  },
+  "188933": {
+    "itemLevel": 252,
+    "name": "Luminous Chevalier's Casque"
+  },
+  "188934": {
+    "itemLevel": 252,
+    "name": "Luminous Chevalier's Vambraces"
+  },
+  "188935": {
+    "itemLevel": 252,
+    "name": "Luminous Chevalier's Girdle"
+  },
+  "188936": {
+    "itemLevel": 252,
+    "name": "Luminous Chevalier's Drape"
+  },
   "188937": {
     "itemLevel": 252,
     "name": "Grasps of the Infinite Infantry"
+  },
+  "188938": {
+    "itemLevel": 252,
+    "name": "Breastplate of the Infinite Infantry"
+  },
+  "188939": {
+    "itemLevel": 252,
+    "name": "March of the Infinite Infantry"
   },
   "188940": {
     "itemLevel": 252,
     "name": "Legplates of the Infinite Infantry"
   },
+  "188941": {
+    "itemLevel": 252,
+    "name": "Pauldrons of the Infinite Infantry"
+  },
+  "188942": {
+    "itemLevel": 252,
+    "name": "Gaze of the Infinite Infantry"
+  },
+  "188943": {
+    "itemLevel": 252,
+    "name": "Vambraces of the Infinite Infantry"
+  },
+  "188944": {
+    "itemLevel": 252,
+    "name": "Greatbelt of the Infinite Infantry"
+  },
+  "188945": {
+    "itemLevel": 252,
+    "name": "Favor of the Infinite Infantry"
+  },
   "189562": {
     "itemLevel": 200,
     "name": "Cosmic Gladiator's Barrier"
   },
+  "189563": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Rifle"
+  },
+  "189564": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Greatsword"
+  },
+  "189566": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Focus Staff"
+  },
+  "189567": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Greatstaff"
+  },
+  "189568": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Gavel"
+  },
+  "189570": {
+    "itemLevel": 200,
+    "name": "Cosmic Gladiator's Slicer"
+  },
   "189584": {
     "itemLevel": 226,
     "name": "Sepulcher's Savior"
+  },
+  "189754": {
+    "itemLevel": 226,
+    "name": "Genesis Lathe"
   },
   "189770": {
     "itemLevel": 226,
@@ -3259,14 +2955,6 @@
     "itemLevel": 226,
     "name": "Clasp of Crooked Crescendos"
   },
-  "189774": {
-    "itemLevel": 226,
-    "name": "Fractured Colossus Core"
-  },
-  "189775": {
-    "itemLevel": 226,
-    "name": "Helm of Solemn Vigil"
-  },
   "189776": {
     "itemLevel": 226,
     "name": "Girdle of the First Gate"
@@ -3278,6 +2966,10 @@
   "189778": {
     "itemLevel": 226,
     "name": "Legplates of the Slumbering Sentinel"
+  },
+  "189779": {
+    "itemLevel": 226,
+    "name": "Key to the Immortal Hearth"
   },
   "189781": {
     "itemLevel": 226,
@@ -3295,17 +2987,9 @@
     "itemLevel": 226,
     "name": "Epaulets of the Ailing Aria"
   },
-  "189785": {
-    "itemLevel": 226,
-    "name": "Oracle's Chromatic Cuirass"
-  },
   "189786": {
     "itemLevel": 226,
     "name": "Song-Mad Sabatons"
-  },
-  "189787": {
-    "itemLevel": 226,
-    "name": "Dausegne's Dissonant Halo"
   },
   "189788": {
     "itemLevel": 226,
@@ -3331,10 +3015,6 @@
     "itemLevel": 226,
     "name": "Winter's Stampeding Striders"
   },
-  "189796": {
-    "itemLevel": 226,
-    "name": "Duty's Ascendant Breastplate"
-  },
   "189797": {
     "itemLevel": 226,
     "name": "Wristwraps of Night's Renewal"
@@ -3343,13 +3023,13 @@
     "itemLevel": 226,
     "name": "Moccasins of Dreadful Absolution"
   },
+  "189799": {
+    "itemLevel": 226,
+    "name": "Elysia's Promise"
+  },
   "189800": {
     "itemLevel": 226,
     "name": "Prelude to Pride"
-  },
-  "189801": {
-    "itemLevel": 226,
-    "name": "Ephemera-Charged Thinking Cap"
   },
   "189802": {
     "itemLevel": 226,
@@ -3371,6 +3051,10 @@
     "itemLevel": 226,
     "name": "Discordant Deathblade"
   },
+  "189808": {
+    "itemLevel": 226,
+    "name": "Lihuvim's Severing Scalpel"
+  },
   "189809": {
     "itemLevel": 226,
     "name": "Skolex's Ravenous Skinguards"
@@ -3387,10 +3071,6 @@
     "itemLevel": 226,
     "name": "Devourer's Sandblown Hidebinders"
   },
-  "189813": {
-    "itemLevel": 226,
-    "name": "Mantle of the Broken Beast"
-  },
   "189814": {
     "itemLevel": 226,
     "name": "Gluttonous Gardbrace"
@@ -3399,29 +3079,25 @@
     "itemLevel": 226,
     "name": "Lurking Predator's Camouflage"
   },
+  "189816": {
+    "itemLevel": 226,
+    "name": "Crystallized Viscera Spike"
+  },
   "189817": {
     "itemLevel": 226,
     "name": "Rift-Scarred Solcrusher"
-  },
-  "189818": {
-    "itemLevel": 233,
-    "name": "Domination's Deliverance"
   },
   "189819": {
     "itemLevel": 226,
     "name": "Assimilated Safeguard"
   },
-  "189822": {
+  "189821": {
     "itemLevel": 226,
-    "name": "Imported Illidari Spaulders"
+    "name": "Illicit Artifact Holster"
   },
   "189823": {
     "itemLevel": 226,
     "name": "Stolen Nathrian Slippers"
-  },
-  "189824": {
-    "itemLevel": 226,
-    "name": "Unlicensed Hyperlight Handlers"
   },
   "189825": {
     "itemLevel": 226,
@@ -3435,9 +3111,17 @@
     "itemLevel": 226,
     "name": "Cartel Xy's Proof of Initiation"
   },
+  "189829": {
+    "itemLevel": 226,
+    "name": "Forerunner's Relic Blade"
+  },
   "189830": {
     "itemLevel": 226,
     "name": "Replicated Relic Blade"
+  },
+  "189831": {
+    "itemLevel": 226,
+    "name": "Ephemera-Stained Sollerets"
   },
   "189833": {
     "itemLevel": 226,
@@ -3459,153 +3143,101 @@
     "itemLevel": 226,
     "name": "Beacon of Stormwind"
   },
-  "189902": {
-    "itemLevel": 242,
-    "name": "Hapless Traveler's Treads"
+  "189839": {
+    "itemLevel": 226,
+    "name": "Soulwarped Seal of Wrynn"
   },
-  "189911": {
-    "itemLevel": 242,
-    "name": "Sublime Fur Mantle"
+  "189840": {
+    "itemLevel": 226,
+    "name": "Remnant's Blasphemous Scourgebelt"
   },
-  "189914": {
-    "itemLevel": 242,
-    "name": "Otiosen's Regenerative Wristwraps"
+  "189841": {
+    "itemLevel": 226,
+    "name": "Soulwarped Seal of Menethil"
   },
-  "189922": {
-    "itemLevel": 242,
-    "name": "Cowl of Shameful Proliferation"
+  "189842": {
+    "itemLevel": 233,
+    "name": "Cuffs of the Covert Commander"
   },
-  "189926": {
-    "itemLevel": 242,
-    "name": "Poison-Licked Spaulders"
+  "189843": {
+    "itemLevel": 233,
+    "name": "Grasps of Abducted Fate"
   },
-  "189936": {
-    "itemLevel": 242,
-    "name": "Feasting's Feeding Cloak"
+  "189847": {
+    "itemLevel": 233,
+    "name": "Shroud of the Sire's Chosen"
   },
-  "189954": {
-    "itemLevel": 242,
-    "name": "Lustrous Sentinel's Sabatons"
+  "189848": {
+    "itemLevel": 233,
+    "name": "Treads of Titanic Curiosity"
   },
-  "189957": {
-    "itemLevel": 242,
-    "name": "Colossus' Focusing Headpiece"
+  "189849": {
+    "itemLevel": 233,
+    "name": "Interdimensional Manica"
   },
-  "189960": {
-    "itemLevel": 242,
-    "name": "Crouching Legs of the Bufonid"
+  "189850": {
+    "itemLevel": 233,
+    "name": "Handguards of Hidden Realms"
   },
-  "189962": {
-    "itemLevel": 242,
-    "name": "Sorranos' Gleaming Pauldrons"
+  "189851": {
+    "itemLevel": 233,
+    "name": "Devastated Worldshard"
   },
-  "189998": {
-    "itemLevel": 242,
-    "name": "Ornate Stone Mallet"
+  "189852": {
+    "itemLevel": 233,
+    "name": "Antumbra, Shadow of the Cosmos"
   },
-  "190005": {
-    "itemLevel": 242,
-    "name": "Hirukon's Radiant Reach"
+  "189853": {
+    "itemLevel": 233,
+    "name": "Astral Verdict"
   },
-  "190009": {
-    "itemLevel": 242,
-    "name": "Hammer of Shattered Works"
+  "189854": {
+    "itemLevel": 233,
+    "name": "Rygelon's Heraldric Ring"
   },
-  "190045": {
-    "itemLevel": 242,
-    "name": "Flowing Sandbender's Staff"
+  "189856": {
+    "itemLevel": 233,
+    "name": "Runecarver's Twisted Ward"
   },
-  "190055": {
-    "itemLevel": 242,
-    "name": "Coalescing Energy Implement"
+  "189857": {
+    "itemLevel": 233,
+    "name": "Epochal Oppressor's Greaves"
   },
-  "190102": {
+  "189859": {
+    "itemLevel": 233,
+    "name": "Worldkiller Iris"
+  },
+  "189860": {
+    "itemLevel": 233,
+    "name": "Forbidden Truth"
+  },
+  "189861": {
+    "itemLevel": 233,
+    "name": "Zovastrum, the Unmaking"
+  },
+  "189862": {
+    "itemLevel": 233,
+    "name": "Gavel of the First Arbiter"
+  },
+  "190051": {
+    "itemLevel": 242,
+    "name": "Elder's Opulent Stave"
+  },
+  "190108": {
     "itemLevel": 246,
-    "name": "Chains of Infectious Serrations"
-  },
-  "190107": {
-    "itemLevel": 246,
-    "name": "Staff of Broken Coils"
+    "name": "Aegis of Laughing Souls"
   },
   "190334": {
     "itemLevel": 252,
     "name": "Origin"
   },
-  "190342": {
-    "itemLevel": 233,
-    "name": "Oracular Slippers"
-  },
-  "190343": {
-    "itemLevel": 233,
-    "name": "Oracular Mitts"
-  },
-  "190344": {
-    "itemLevel": 233,
-    "name": "Oracular Hood"
-  },
-  "190346": {
-    "itemLevel": 233,
-    "name": "Oracular Mantle"
-  },
-  "190347": {
-    "itemLevel": 233,
-    "name": "Oracular Sash"
-  },
-  "190348": {
-    "itemLevel": 233,
-    "name": "Oracular Wrists"
-  },
-  "190349": {
-    "itemLevel": 233,
-    "name": "Cryptic Vest"
-  },
-  "190351": {
-    "itemLevel": 233,
-    "name": "Cryptic Grips"
-  },
-  "190352": {
-    "itemLevel": 233,
-    "name": "Cryptic Mask"
-  },
   "190354": {
     "itemLevel": 233,
     "name": "Cryptic Shoulderpads"
   },
-  "190355": {
-    "itemLevel": 233,
-    "name": "Cryptic Cinch"
-  },
-  "190356": {
-    "itemLevel": 233,
-    "name": "Cryptic Wristbands"
-  },
-  "190358": {
-    "itemLevel": 233,
-    "name": "Enigmatic Footguards"
-  },
-  "190359": {
-    "itemLevel": 233,
-    "name": "Enigmatic Gauntlets"
-  },
-  "190360": {
-    "itemLevel": 233,
-    "name": "Enigmatic Cowl"
-  },
   "190361": {
     "itemLevel": 233,
     "name": "Enigmatic Legguards"
-  },
-  "190362": {
-    "itemLevel": 233,
-    "name": "Enigmatic Epaulettes"
-  },
-  "190363": {
-    "itemLevel": 233,
-    "name": "Enigmatic Chain"
-  },
-  "190364": {
-    "itemLevel": 233,
-    "name": "Enigmatic Binds"
   },
   "190365": {
     "itemLevel": 233,
@@ -3619,45 +3251,65 @@
     "itemLevel": 233,
     "name": "Numerus Handguards"
   },
-  "190368": {
-    "itemLevel": 233,
-    "name": "Numerus Crown"
-  },
   "190370": {
     "itemLevel": 233,
     "name": "Numerus Shoulderplates"
   },
-  "190371": {
-    "itemLevel": 233,
-    "name": "Numerus Girdle"
-  },
-  "190372": {
-    "itemLevel": 233,
-    "name": "Numerus Cuffs"
+  "190374": {
+    "itemLevel": 246,
+    "name": "Gemstone of Prismatic Brilliance"
   },
   "190389": {
     "itemLevel": 226,
     "name": "Broker's Lucky Coin"
   },
-  "190458": {
-    "itemLevel": 246,
-    "name": "Atrophy's Ominous Bulwark"
+  "190464": {
+    "itemLevel": 265,
+    "name": "Cord of Unity"
   },
-  "190461": {
-    "itemLevel": 246,
-    "name": "Reanimator's Beguiling Baton"
+  "190465": {
+    "itemLevel": 265,
+    "name": "Cinch of Unity"
   },
-  "190463": {
-    "itemLevel": 246,
-    "name": "Dismal Mystic's Glaive"
+  "190466": {
+    "itemLevel": 265,
+    "name": "Clasp of Unity"
   },
-  "190582": {
-    "itemLevel": 226,
-    "name": "Symbol of the Vombata"
+  "190467": {
+    "itemLevel": 265,
+    "name": "Girdle of Unity"
   },
-  "190597": {
-    "itemLevel": 226,
-    "name": "Symbol of the Lupine"
+  "190468": {
+    "itemLevel": 265,
+    "name": "Cord of Unity"
+  },
+  "190469": {
+    "itemLevel": 265,
+    "name": "Cord of Unity"
+  },
+  "190470": {
+    "itemLevel": 265,
+    "name": "Cinch of Unity"
+  },
+  "190471": {
+    "itemLevel": 265,
+    "name": "Cinch of Unity"
+  },
+  "190472": {
+    "itemLevel": 265,
+    "name": "Cinch of Unity"
+  },
+  "190473": {
+    "itemLevel": 265,
+    "name": "Clasp of Unity"
+  },
+  "190474": {
+    "itemLevel": 265,
+    "name": "Girdle of Unity"
+  },
+  "190475": {
+    "itemLevel": 265,
+    "name": "Girdle of Unity"
   },
   "190602": {
     "itemLevel": 226,
@@ -3667,17 +3319,9 @@
     "itemLevel": 233,
     "name": "Impossibly Ancient Cloak"
   },
-  "190614": {
-    "itemLevel": 226,
-    "name": "Antros' Entrusted Bascinet"
-  },
   "190615": {
     "itemLevel": 226,
     "name": "Cosmic Guardian's Casing"
-  },
-  "190616": {
-    "itemLevel": 226,
-    "name": "Controlled Sequence Clasp"
   },
   "190617": {
     "itemLevel": 226,
@@ -3690,14 +3334,6 @@
   "190619": {
     "itemLevel": 226,
     "name": "Antecedent's Aliform Joggers"
-  },
-  "190620": {
-    "itemLevel": 226,
-    "name": "Sav'thul's Calamitous Tantour"
-  },
-  "190621": {
-    "itemLevel": 226,
-    "name": "Dealic Deterrent Stockings"
   },
   "190624": {
     "itemLevel": 226,
@@ -3715,6 +3351,18 @@
     "itemLevel": 226,
     "name": "Subversive Lord's Leggings"
   },
+  "190629": {
+    "itemLevel": 226,
+    "name": "Cartel's Larcenous Toecaps"
+  },
+  "190630": {
+    "itemLevel": 226,
+    "name": "Devouring Pellicle Shoulderpads"
+  },
+  "190631": {
+    "itemLevel": 226,
+    "name": "Vandalized Ephemera Mitts"
+  },
   "190632": {
     "itemLevel": 233,
     "name": "Cypher-Etched Ring"
@@ -3727,120 +3375,24 @@
     "itemLevel": 233,
     "name": "Cypher-Etched Torque"
   },
-  "190635": {
-    "itemLevel": 233,
-    "name": "Cypher-Etched Lavaliere"
-  },
-  "190726": {
-    "itemLevel": 226,
-    "name": "Extract of Prodigious Sands"
-  },
-  "190729": {
-    "itemLevel": 242,
-    "name": "Vigorous Sentinel's Seal"
-  },
-  "190730": {
-    "itemLevel": 242,
-    "name": "Matriarch's Shell Band"
-  },
-  "190731": {
-    "itemLevel": 242,
-    "name": "Deceiver's Illusionary Signet"
-  },
-  "190732": {
-    "itemLevel": 242,
-    "name": "Strand of Tainted Relics"
-  },
-  "190742": {
-    "itemLevel": 233,
-    "name": "Dimensional Enigmatic Footguards"
-  },
-  "190744": {
-    "itemLevel": 233,
-    "name": "Temporal Enigmatic Footguards"
-  },
-  "190745": {
-    "itemLevel": 233,
-    "name": "Dimensional Numerus Handguards"
-  },
-  "190747": {
-    "itemLevel": 233,
-    "name": "Temporal Numerus Handguards"
-  },
-  "190748": {
-    "itemLevel": 233,
-    "name": "Dimensional Cryptic Grips"
-  },
-  "190749": {
-    "itemLevel": 233,
-    "name": "Temporal Cryptic Grips"
-  },
-  "190750": {
-    "itemLevel": 233,
-    "name": "Recreative Cryptic Grips"
-  },
-  "190751": {
-    "itemLevel": 233,
-    "name": "Dimensional Oracular Wrists"
-  },
-  "190753": {
-    "itemLevel": 233,
-    "name": "Temporal Oracular Wrists"
+  "190652": {
+    "itemLevel": 155,
+    "name": "Ticking Sack of Terror"
   },
   "190958": {
     "itemLevel": 155,
     "name": "So'leah's Secret Technique"
   },
-  "190978": {
-    "itemLevel": 233,
-    "name": "Nova Oracular Smock"
-  },
-  "190979": {
-    "itemLevel": 233,
-    "name": "Crystallic Oracular Smock"
-  },
-  "190981": {
-    "itemLevel": 233,
-    "name": "Broker's Oracular Mantle"
-  },
-  "190984": {
-    "itemLevel": 233,
-    "name": "Nova Cryptic Mask"
-  },
   "190985": {
     "itemLevel": 233,
     "name": "Crystallic Cryptic Mask"
   },
-  "190987": {
-    "itemLevel": 233,
-    "name": "Broker's Cryptic Shoulderpads"
-  },
-  "190990": {
-    "itemLevel": 233,
-    "name": "Nova Enigmatic Epaulettes"
-  },
-  "190991": {
-    "itemLevel": 233,
-    "name": "Crystallic Enigmatic Epaulettes"
-  },
-  "190993": {
-    "itemLevel": 233,
-    "name": "Broker's Enigmatic Cowl"
-  },
-  "190994": {
-    "itemLevel": 233,
-    "name": "Synchronous Enigmatic Cowl"
-  },
-  "190996": {
-    "itemLevel": 233,
-    "name": "Nova Numerus Crown"
-  },
-  "190997": {
-    "itemLevel": 233,
-    "name": "Crystallic Numerus Crown"
-  },
   "190999": {
     "itemLevel": 233,
     "name": "Broker's Numerus Breastplate"
+  },
+  "191001": {
+    "itemLevel": 233,
+    "name": "Observer's Umbral Shiv"
   }
 }

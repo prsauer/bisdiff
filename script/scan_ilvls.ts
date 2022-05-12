@@ -1,8 +1,8 @@
 import fs from "fs";
 import { join } from "path";
-import cdata from "./json/composed.json";
+import cdata from "../src/json/composed.json";
 import idata from "../equippable-items.json";
-import { EquippedItem } from "./proxy/api-types";
+import { EquippedItem } from "../src/proxy/api-types";
 
 /**
  * REQUIRES: ../equippable-items.json locally
