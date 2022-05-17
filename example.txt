@@ -1,0 +1,135 @@
+# Armspriest - Holy - 2022-05-16 23:09 - US/Stormrage
+# SimC Addon 9.2.0
+# Requires SimulationCraft 920-01 or newer
+
+priest="Armspriest"
+level=60
+race=undead
+region=us
+server=stormrage
+role=attack
+professions=engineering=100/jewelcrafting=100
+talents=3321112
+spec=holy
+
+covenant=night_fae
+soulbind=niya:1,322721/78:10:1/342270/67:10:1/320668/72:10:1/82:10:1/320660/84:10:1/352502/69:10:1/352503
+# soulbind=dreamweaver:2,319217/73:10:1/84:10:1/319213/69:10:1/66:10:1/319216/319191/116:10:1/352779/85:10:1/352786
+# soulbind=korayn:6,325066/101:6:1/325067/69:10:1/325073/72:10:1/84:10:1/325068/78:10:1/352806/67:10:1/352805
+# conduits_available=75:10/76:10/77:10/78:10/81:10/82:10/84:10/101:6/107:10/113:10/114:10/115:10/116:10/67:10/69:10/73:10/85:10/66:10/71:10/72:10/283:10
+renown=80
+
+head=,id=188880,gem_id=173129,bonus_id=8116/8151/7901/1485/6646/7580
+neck=,id=173146,gem_id=173128,bonus_id=7881/7960,drop_level=60,crafted_stats=40
+shoulder=,id=188879,bonus_id=7359/6652/8152/7785/1495/6646
+back=,id=186781,enchant_id=6202,bonus_id=8136/8138/7895/1537/6646
+chest=,id=188875,enchant_id=6217,bonus_id=8116/7901/8153/1485
+tabard=,id=69210
+wrist=,id=186805,enchant_id=6220,bonus_id=8136/8138/6652/7579/7895/1537/6646
+hands=,id=186794,bonus_id=8136/8117/7898/1537/6646
+waist=,id=186802,bonus_id=8136/8137/7578/7898/1537/6646
+legs=,id=188878,bonus_id=6652/8155/7901/1485/6646
+feet=,id=173243,enchant_id=6207,bonus_id=8126/7882/8156/6649/6650/1588
+finger1=,id=186784,enchant_id=6166,bonus_id=7578/7895/1537/6646
+finger2=,id=178926,enchant_id=6166,gem_id=173128,bonus_id=6977/8156/6649/6650/6935/7882/1588
+trinket1=,id=186869,bonus_id=7530/1534/6646
+trinket2=,id=188775,bonus_id=7898/1537/6646
+main_hand=,id=189566,enchant_id=6229,bonus_id=6652/7904/1537/6646
+
+### Gear from Bags
+#
+# Cosmic Aspirant's Silk Cover (242)
+# head=,id=186922,bonus_id=7499/1556/6646
+#
+# Abominable Visage (262)
+# head=,id=178732,bonus_id=7767/8136/8116/7359/6652/7579/1576/6646
+#
+# Cocoonsilk Cowl (255)
+# head=,id=178693,bonus_id=8136/8116/7359/6652/7579/7765/1569/6646
+#
+# Abominable Visage (255)
+# head=,id=178732,bonus_id=7765/8136/8116/7359/6652/7578/1569/6646
+#
+# Flash Concentration (291)
+# neck=,id=178927,gem_id=173128,bonus_id=6974/7882/8156/6649/6650/1588/6935
+#
+# Azure-Venom Choker (255)
+# neck=,id=180115,bonus_id=7793/7359/6652/7578/1569/6646
+#
+# Cosmic Gladiator's Necklace (265)
+# neck=,id=186787,bonus_id=7578/7895/1537/6646
+#
+# Sin Stained Pendant (255)
+# neck=,id=178827,bonus_id=7793/7359/6652/7578/1569/6646
+#
+# Cosmic Gladiator's Silk Mantle (265)
+# shoulder=,id=186800,bonus_id=8136/8117/6652/7898/1537/6646
+#
+# Harmonious Spaulders (255)
+# shoulder=,id=185804,bonus_id=7779/8136/8117/7359/43/1572/6646
+#
+# Reanimator's Mantle (262)
+# shoulder=,id=178740,bonus_id=7781/8136/8117/7359/6652/1576/6646
+#
+# Blighted Margrave's Cloak (272)
+# back=,id=178755,enchant_id=6204,bonus_id=8136/8138/7359/6652/7798/1586/6646
+#
+# X'anshi, Return of Archbishop Benedictus (291)
+# back=,id=173242,enchant_id=6202,bonus_id=6984/7882/8156/6649/6650/1588
+#
+# Sinister Requiem Vestments (272)
+# chest=,id=180098,enchant_id=6217,bonus_id=8136/8116/7359/6652/7770/1586/6646
+#
+# Sephuz's Proclamation (262)
+# chest=,id=173241,enchant_id=6217,bonus_id=7103/6649/6650/7451/1559/8156
+#
+# Cosmic Aspirant's Silk Tunic (242)
+# chest=,id=186874,enchant_id=6217,bonus_id=7499/1556/6646
+#
+# Cosmic Aspirant's Silk Bindings (242)
+# wrist=,id=186938,enchant_id=6220,bonus_id=7485/1556/6646
+#
+# Mitts of Flawless Duplication (262)
+# hands=,id=178930,bonus_id=7781/8136/8117/7359/6652/1576/6646
+#
+# Cosmic Aspirant's Silk Cord (242)
+# waist=,id=186898,bonus_id=7492/1556/6646
+#
+# Cord of Unity (265)
+# waist=,id=190468,bonus_id=6652/7578
+#
+# Cosmic Aspirant's Silk Footwraps (242)
+# feet=,id=186915,bonus_id=7492/1556/6646
+#
+# Versatile Solenium Ring (262)
+# finger1=,id=173131,enchant_id=6166,gem_id=173128,bonus_id=7881/7960/6649,drop_level=60,crafted_stats=49
+#
+# Signet of Collapsing Stars (272)
+# finger1=,id=185813,enchant_id=6166,gem_id=173128,bonus_id=7359/6652/7580/7798/1589/6646
+#
+# Cosmic Aspirant's Ring (242)
+# finger1=,id=186901,enchant_id=6166,bonus_id=7485/1556/6646
+#
+# Cosmic Gladiator's Resonator (265)
+# trinket1=,id=188766,bonus_id=7898/1537/6646
+#
+# Cosmic Aspirant's Medallion (242)
+# trinket1=,id=186966,bonus_id=7485/1556/6646
+#
+# Cosmic Aspirant's Emblem (242)
+# trinket1=,id=186946,bonus_id=7492/1556/6646
+#
+# Cosmic Gladiator's Fastidious Resolve (259)
+# trinket1=,id=188524,bonus_id=7894/1531/6646
+#
+# Cosmic Gladiator's Echoing Resolve (262)
+# trinket1=,id=188691,bonus_id=7530/1534/6646
+#
+# Cosmic Gladiator's Devouring Malediction (249)
+# trinket1=,id=188778,bonus_id=7534/1521/6646
+#
+# "The Brokers Angle'r" (40)
+# main_hand=,id=180136
+#
+# Whizblast Walking Stick (262)
+# main_hand=,id=179339,bonus_id=7823/7359/6652/1576/6646

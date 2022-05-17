@@ -32,15 +32,19 @@ function CurrentMarker({ i, children }: { i: number; children: any }) {
 
 function SlotTitle({
   slotType,
-  quality,
   onClick,
+  underlined = false,
 }: {
   slotType: string;
-  quality: MatchQuality;
+  underlined?: boolean;
   onClick?: () => void;
 }) {
   return (
-    <TappableText onClick={onClick} style={{ fontSize: 14 }} text={slotType} />
+    <TappableText
+      onClick={onClick}
+      style={{ fontSize: 14, textDecoration: underlined ? "underline" : "" }}
+      text={slotType}
+    />
   );
 }
 
@@ -52,9 +56,13 @@ export function ItemSlot(props: ItemSlotProps) {
   const histoSameSlot = props.histo.filter(
     (a) => a.item.slot.type === props.slotType
   );
-  const goodIlvl =
-    histoSameSlot.reduce((prev, cur) => prev + cur.item.level.value, 0) /
-    histoSameSlot.length;
+
+  // Compute weighted-by-frequency average ilvl for comparative distribution
+  const averageIlvlOfComparedProfiles =
+    histoSameSlot.reduce(
+      (prev, cur) => prev + cur.count * cur.item.level.value,
+      0
+    ) / histoSameSlot.reduce((prev, cur) => prev + cur.count, 0);
 
   const myEquipped = props.targetData.filter(
     (i) => i.slot.type === props.slotType
@@ -72,7 +80,10 @@ export function ItemSlot(props: ItemSlotProps) {
     percentOfMatch > 45 ? MatchQuality.GREEN : MatchQuality.YELLOW;
 
   if (percentOfMatch < 25) {
-    if (['FINGER_1', 'FINGER_2'].includes(props.slotType) && [0,1].includes(indexOfComparedTo)) {
+    if (
+      ["FINGER_1", "FINGER_2"].includes(props.slotType) &&
+      [0, 1].includes(indexOfComparedTo)
+    ) {
       qualityOfMatch = MatchQuality.GREEN;
     } else {
       qualityOfMatch = MatchQuality.RED;
@@ -84,7 +95,9 @@ export function ItemSlot(props: ItemSlotProps) {
 
   /* Handle edge case for empty slots */
   const totalSeen = histoSameSlot.reduce((cur, prev) => cur + prev.count, 0);
-  const percentEmpty = 100*(props.profilesComparedCount - totalSeen)/props.profilesComparedCount;
+  const percentEmpty =
+    (100 * (props.profilesComparedCount - totalSeen)) /
+    props.profilesComparedCount;
   const isEmptyForTarget = myEquipped.length === 0;
 
   if (isEmptyForTarget && percentEmpty > 75) {
@@ -139,8 +152,8 @@ export function ItemSlot(props: ItemSlotProps) {
       >
         <SlotTitle
           slotType={props.slotType}
-          quality={qualityOfMatch}
           onClick={() => setExpanded(!expanded)}
+          underlined={expanded}
         />
         <EquipmentInfo
           item={morphItem(
@@ -151,7 +164,9 @@ export function ItemSlot(props: ItemSlotProps) {
         />
       </div>
       {myEquipped.map((a, i) => (
-        <div key={i}>{(a.level.value - goodIlvl).toFixed(1)} ilvls</div>
+        <div key={i}>
+          {(a.level.value - averageIlvlOfComparedProfiles).toFixed(1)} ilvls
+        </div>
       ))}
 
       {histoToShow.map((a, idx) => {
@@ -172,7 +187,12 @@ export function ItemSlot(props: ItemSlotProps) {
           </div>
         );
       })}
-      { percentEmpty > 5 && <div>{ isEmptyForTarget && "*" }{percentEmpty.toFixed(1)}% empty</div>}
+      {percentEmpty > 5 && (
+        <div>
+          {isEmptyForTarget && "*"}
+          {percentEmpty.toFixed(1)}% empty
+        </div>
+      )}
     </div>
   );
 }
