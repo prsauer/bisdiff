@@ -14,6 +14,7 @@ import { simcReportToItemArray } from "../util/decodeSimc";
 import { findMissingEnchantments } from "../util/enchants";
 import { Heading2 } from "../design/atoms";
 import { findMissingUpgrades } from "../util/upgrades";
+import { StatsHisto } from "../components/StatsHisto";
 
 const compositeData = cdata as unknown as {
   specId: string;
@@ -49,13 +50,10 @@ export function DiffPage() {
   const [profilesComparedCount, setProfilesComparedCount] = useState(0);
   const [specOverride, setSpecOverride] = useState<number | undefined>();
 
-  const [data, setData] = useState<
-    | {
-        profile: CharacterProfile;
-        equippedCharacter: EquippedItemsCharacter;
-      }
-    | undefined
-  >(undefined);
+  const [data, setData] = useState<{
+    profile: CharacterProfile;
+    equippedCharacter: EquippedItemsCharacter;
+  } | null>(null);
 
   const [itemData, setItemData] = useState<
     {
@@ -76,16 +74,21 @@ export function DiffPage() {
   function simcInputChanged(e: any) {
     const newData = e.target.value;
     setSimcDataInput(newData);
-
     setSpecOverride(undefined);
     const targetItemData = simcReportToItemArray(newData);
     setData(targetItemData);
-    const res = calculateHistograms(
-      targetItemData.profile.active_spec.id,
-      targetItemData.equippedCharacter
-    );
-    setItemData(res.histoMaps || []);
-    setProfilesComparedCount(res.profilesComparedCount || 0);
+
+    if (targetItemData) {
+      const res = calculateHistograms(
+        targetItemData.profile.active_spec.id,
+        targetItemData.equippedCharacter
+      );
+      setItemData(res.histoMaps || []);
+      setProfilesComparedCount(res.profilesComparedCount || 0);
+    } else {
+      setItemData([]);
+      setProfilesComparedCount(0);
+    }
   }
 
   function writeSpecOverride(d: string) {
@@ -108,6 +111,12 @@ export function DiffPage() {
   const missingUpgrades = data?.equippedCharacter
     ? findMissingUpgrades(data.equippedCharacter, data.profile)
     : [];
+
+  const items = itemData
+    .map((i) => i.histo[0])
+    .filter((i) => i)
+    .flat()
+    .map((i) => i.item);
 
   return (
     <PageContainer>
@@ -197,7 +206,7 @@ export function DiffPage() {
             />
           ))}
       </div>
-
+      {items.length > 0 && <StatsHisto items={items} />}
       <div style={{ marginTop: 12 }}>
         Known issues: Trinkets/rings aren't compared well due to having 2
         equipped. Only EU/US supported.

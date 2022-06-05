@@ -87,6 +87,9 @@ export function ItemSlot(props: ItemSlotProps) {
       qualityOfMatch = MatchQuality.GREEN;
     } else {
       qualityOfMatch = MatchQuality.RED;
+      // If you're in the 10% - 25% range but still in top3, call this yellow instead of red
+      if (percentOfMatch > 10 && indexOfComparedTo < 3)
+        qualityOfMatch = MatchQuality.YELLOW;
     }
   }
   if (indexOfComparedTo === 0) {

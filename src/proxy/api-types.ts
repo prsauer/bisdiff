@@ -118,7 +118,19 @@ export type EquippedItem = {
   level: {
     value: number;
   };
+  stats?: {
+    display: {
+      color: { r: number; g: number; b: number; a: number };
+      display_string: string;
+    };
+    type: {
+      name: string;
+      type: string;
+    };
+    value: number;
+  }[];
 };
+
 export type EquippedItemsCharacter = {
   character: CharacterPartial;
   equipped_items: EquippedItem[];

@@ -114,7 +114,7 @@ function fixBm(s: string) {
 export function simcReportToItemArray(report: string): {
   profile: CharacterProfile;
   equippedCharacter: EquippedItemsCharacter;
-} {
+} | null {
   const rval = [];
   const profile: CharacterProfile = {
     id: 0,
@@ -244,6 +244,10 @@ export function simcReportToItemArray(report: string): {
       equipped_items: rval,
     },
   });
+  console.log("NAME", character.name);
+  if (character.name.length < 1) {
+    return null;
+  }
   return {
     profile,
     equippedCharacter: {
