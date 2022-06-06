@@ -244,8 +244,8 @@ export function simcReportToItemArray(report: string): {
       equipped_items: rval,
     },
   });
-  console.log("NAME", character.name);
-  if (character.name.length < 1) {
+  // console.log("NAME", character.name);
+  if (profile.character_class.name.length < 1) {
     return null;
   }
   return {
