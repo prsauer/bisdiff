@@ -1,6 +1,14 @@
 import { EquippedItem } from "../proxy/api-types";
 
-function computeStatDist(items: EquippedItem[], includeAll?: boolean) {
+function computeStatDist(
+  items: {
+    id: string;
+    count: number;
+    percent: number;
+    item: EquippedItem;
+  }[],
+  includeAll?: boolean
+) {
   const defaultVal = {
     value: 0,
     color: { r: 0, g: 0, b: 0, a: 0 },
@@ -10,19 +18,19 @@ function computeStatDist(items: EquippedItem[], includeAll?: boolean) {
     { value: number; color: { r: number; g: number; b: number; a: number } }
   > = {};
   items
-    .filter((i) => i.stats)
-    .map((i) => i.stats)
-    .flat()
-    .forEach((itemStats) => {
-      const stats = itemStats!;
-      if (statsByName[stats.type.name]) {
-        statsByName[stats.type.name].value += stats.value;
-      } else {
-        statsByName[stats.type.name] = {
-          value: stats.value,
-          color: stats.display.color,
-        };
-      }
+    .filter((i) => i.item.stats)
+    .forEach((i) => {
+      const stats = i.item.stats!;
+      stats.forEach((stat) => {
+        if (statsByName[stat.type.name]) {
+          statsByName[stat.type.name].value += stat.value * i.percent;
+        } else {
+          statsByName[stat.type.name] = {
+            value: stat.value * i.percent,
+            color: stat.display.color,
+          };
+        }
+      });
     });
   if (includeAll) {
     throw new Error("NYI");
@@ -47,15 +55,30 @@ function computeStatDist(items: EquippedItem[], includeAll?: boolean) {
   ];
 }
 
-export function StatsHisto(props: { items: EquippedItem[] }) {
+export function StatsHisto(props: {
+  title: string;
+  items: {
+    id: string;
+    count: number;
+    percent: number;
+    item: EquippedItem;
+  }[];
+}) {
   const dist = computeStatDist(props.items).sort(
     (a, b) => b.stat.value - a.stat.value
   );
   const total = dist.reduce((prev, cur) => cur.stat.value + prev, 0);
   return (
     <>
-      <div>Ladder-Bests Stat Distribution</div>
-      <div style={{ display: "flex", flexDirection: "row", width: 600 }}>
+      <div>{props.title}</div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          width: "100%",
+          maxWidth: 950,
+        }}
+      >
         {dist
           .filter((i) => i.stat.value > 0)
           .map((i, idx) => {
@@ -67,15 +90,19 @@ export function StatsHisto(props: { items: EquippedItem[] }) {
             ];
             const pct = Math.round((100 * i.stat.value) / total);
             return (
-              <div
-                key={i.name}
-                style={{
-                  flex: `${(100 * i.stat.value) / total}`,
-                  backgroundColor: colors[idx],
-                }}
-              >
-                {i.name[0]} {pct}%
-              </div>
+              <>
+                <div
+                  key={i.name}
+                  style={{
+                    paddingLeft: 4,
+                    flex: `${(100 * i.stat.value) / total}`,
+                    backgroundColor: colors[idx],
+                  }}
+                >
+                  {i.name[0]} {pct}%
+                </div>
+                <div key={i.name + "-sep"} style={{ width: 4, height: 1 }} />
+              </>
             );
           })}
       </div>

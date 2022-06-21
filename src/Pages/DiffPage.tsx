@@ -118,6 +118,29 @@ export function DiffPage() {
     .flat()
     .map((i) => i.item);
 
+  const allItemsHisto = itemData.map((i) => i.histo).flat();
+
+  // Look up the full stats of the player's equipped items
+  // api does not resolve full stats :\
+  const resolvedItems =
+    data?.equippedCharacter.equipped_items
+      .map((i) =>
+        allItemsHisto.find(
+          (j) => j.item.item.id.toString() === i.item.id.toString()
+        )
+      )
+      .map((i) => {
+        if (i) {
+          return {
+            ...i,
+            percent: 1, // set players items all to frequency:1 to make the calc for StatsHisto work
+          };
+        } else {
+          return undefined;
+        }
+      })
+      .flatMap((i) => (i ? [i] : [])) || [];
+
   return (
     <PageContainer>
       <div style={{ marginTop: 12, color: "gray" }}>
@@ -206,7 +229,15 @@ export function DiffPage() {
             />
           ))}
       </div>
-      {items.length > 0 && <StatsHisto items={items} />}
+      {items.length > 0 && (
+        <StatsHisto
+          items={allItemsHisto}
+          title={"Ladder-Bests Stat Distribution"}
+        />
+      )}
+      {resolvedItems.length > 0 && (
+        <StatsHisto items={resolvedItems} title={"Equipped Distribution"} />
+      )}
       <div style={{ marginTop: 12 }}>
         Known issues: Trinkets/rings aren't compared well due to having 2
         equipped. Only EU/US supported.
