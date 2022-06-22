@@ -2,14 +2,11 @@ import React, { useRef, useState } from "react";
 import cdata from "../json/composed.json";
 import {
   CharacterProfile,
-  CombatUnitSpecNames,
   EquippedItem,
   EquippedItemsCharacter,
-  SpecIdsByClass,
 } from "../proxy/api-types";
 import { ItemSlot } from "../components/ItemSlot";
 import { PageContainer } from "../design/PageContainer";
-import { NavBlade, NavBladeButton } from "../design/NavBlade";
 import { simcReportToItemArray } from "../util/decodeSimc";
 import { findMissingEnchantments } from "../util/enchants";
 import { Heading2 } from "../design/atoms";
@@ -46,9 +43,7 @@ function calculateHistograms(
 export function DiffPage() {
   const [simcDataInput, setSimcDataInput] = useState("");
 
-  const [showAll, setShowAll] = useState(true);
   const [profilesComparedCount, setProfilesComparedCount] = useState(0);
-  const [specOverride, setSpecOverride] = useState<number | undefined>();
 
   const [data, setData] = useState<{
     profile: CharacterProfile;
@@ -74,7 +69,6 @@ export function DiffPage() {
   function simcInputChanged(e: any) {
     const newData = e.target.value;
     setSimcDataInput(newData);
-    setSpecOverride(undefined);
     const targetItemData = simcReportToItemArray(newData);
     setData(targetItemData);
 
@@ -89,18 +83,6 @@ export function DiffPage() {
       setItemData([]);
       setProfilesComparedCount(0);
     }
-  }
-
-  function writeSpecOverride(d: string) {
-    const newSpecOverride = parseInt(d);
-    if (!data) return;
-    const res = calculateHistograms(
-      newSpecOverride || data.profile.active_spec.id || 100,
-      data.equippedCharacter
-    );
-    setSpecOverride(newSpecOverride);
-    setItemData(res.histoMaps || []);
-    setProfilesComparedCount(res.profilesComparedCount || 0);
   }
 
   const simcInputRef = useRef<HTMLTextAreaElement>(null);
@@ -142,7 +124,7 @@ export function DiffPage() {
       .flatMap((i) => (i ? [i] : [])) || [];
 
   return (
-    <PageContainer>
+    <PageContainer style={{ maxWidth: 750 }}>
       <div style={{ marginTop: 12, color: "gray" }}>
         Compares your equipped items to the top 5k pvp players, filtered for
         your spec.
@@ -175,30 +157,9 @@ export function DiffPage() {
           placeholder="paste simc data here"
         />
       </div>
-      <NavBlade>
-        <NavBladeButton
-          label={"Show/Hide already BIS gear"}
-          selected={showAll ? "Show/Hide already BIS gear" : ""}
-          clickHandler={() => setShowAll(!showAll)}
-        />
-      </NavBlade>
-      <NavBlade label="Override spec">
-        {data &&
-          SpecIdsByClass[data?.profile.character_class.name.toLowerCase()].map(
-            (d) => (
-              <NavBladeButton
-                key={d}
-                label={CombatUnitSpecNames[d]}
-                selected={CombatUnitSpecNames[`${specOverride}`]}
-                clickHandler={() => writeSpecOverride(d)}
-              />
-            )
-          )}
-      </NavBlade>
       {data && (
         <div style={{ marginTop: 12 }}>
-          Found profile: {data.profile.name},{" "}
-          {data.profile.race.name.toLocaleLowerCase()}{" "}
+          {data.profile.name}, {data.profile.race.name.toLocaleLowerCase()}{" "}
           {data.profile.active_spec.name.toLocaleLowerCase()}{" "}
           {data.profile.character_class.name.toLocaleLowerCase()}
         </div>
@@ -207,15 +168,15 @@ export function DiffPage() {
         <Heading2 key={a}>Slot missing enchantment: {a}</Heading2>
       ))}
       {missingUpgrades.map((a) => (
-        <Heading2 key={a}>{a}</Heading2>
+        <div className="ml-2 text-lg text-red-400" key={a}>
+          {a}
+        </div>
       ))}
       <div
         style={{
           display: "flex",
           flexDirection: "row",
           flexWrap: "wrap",
-          margin: 25,
-          maxWidth: 950,
         }}
       >
         {data?.equippedCharacter.equipped_items &&
@@ -225,7 +186,6 @@ export function DiffPage() {
               {...b}
               targetData={data.equippedCharacter.equipped_items}
               profilesComparedCount={profilesComparedCount}
-              showAll={showAll}
             />
           ))}
       </div>

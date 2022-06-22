@@ -37,6 +37,7 @@ function Layout() {
       >
         ~/wow/stats/data/vis
       </div>
+      <div className="text-3xl font-bold underline">test text</div>
       <main style={{ flexGrow: 1 }}>
         <Outlet />
       </main>

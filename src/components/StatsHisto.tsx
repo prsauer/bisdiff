@@ -76,7 +76,6 @@ export function StatsHisto(props: {
           display: "flex",
           flexDirection: "row",
           width: "100%",
-          maxWidth: 950,
         }}
       >
         {dist

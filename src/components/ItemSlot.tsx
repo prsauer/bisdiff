@@ -13,7 +13,6 @@ interface ItemSlotProps {
   slotType: string;
   targetData: EquippedItem[];
   profilesComparedCount: number;
-  showAll: boolean;
 }
 
 function morphItem(i?: EquippedItem) {
@@ -123,9 +122,7 @@ export function ItemSlot(props: ItemSlotProps) {
     histoToShow[2] = props.histo[bestMatch];
   }
 
-  if (!props.showAll && bestMatch === 0) {
-    return null;
-  }
+  const MARGIN = 4;
 
   return (
     <div
@@ -134,8 +131,8 @@ export function ItemSlot(props: ItemSlotProps) {
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-start",
-        marginBottom: 25,
-        marginRight: 25,
+        marginBottom: MARGIN,
+        marginRight: MARGIN,
         padding: 4,
         borderStyle: "solid",
         borderWidth: 2,

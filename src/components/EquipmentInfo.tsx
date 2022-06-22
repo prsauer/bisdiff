@@ -7,17 +7,7 @@ import { useEffect } from "react";
 // }, {} as Record<string, string>);
 
 function Box(props: any) {
-  return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
-      }}
-    >
-      {props.children}
-    </div>
-  );
+  return <div className="flex-column items-center">{props.children}</div>;
 }
 
 const enchantsMap: Record<string, string> = {
@@ -130,7 +120,7 @@ export function EquipmentInfo({
   const fontSize = fontMap[size];
 
   return (
-    <Box display="flex" flexDirection={"row"} alignItems={"center"}>
+    <Box>
       <a
         href={`https://www.wowhead.com/item=${item.id}&bonus=${item.bonuses
           .filter((b) => b && b !== "0")
