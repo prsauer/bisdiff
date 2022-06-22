@@ -9,7 +9,6 @@ import { ItemSlot } from "../components/ItemSlot";
 import { PageContainer } from "../design/PageContainer";
 import { simcReportToItemArray } from "../util/decodeSimc";
 import { findMissingEnchantments } from "../util/enchants";
-import { Heading2 } from "../design/atoms";
 import { findMissingUpgrades } from "../util/upgrades";
 import { StatsHisto } from "../components/StatsHisto";
 
@@ -129,34 +128,18 @@ export function DiffPage() {
         Compares your equipped items to the top 5k pvp players, filtered for
         your spec.
       </div>
-      <div
-        style={{
-          marginTop: 4,
-          display: "flex",
-          flexDirection: "row",
+
+      <textarea
+        ref={simcInputRef}
+        onFocus={() => {
+          if (simcInputRef.current) simcInputRef.current.select();
         }}
-      >
-        <textarea
-          ref={simcInputRef}
-          onFocus={() => {
-            if (simcInputRef.current) simcInputRef.current.select();
-          }}
-          style={{
-            width: 500,
-            backgroundColor: "#383838",
-            color: "lightgray",
-            borderStyle: "solid",
-            borderWidth: 1,
-            padding: 0,
-            paddingLeft: 2,
-            margin: 0,
-          }}
-          onSubmit={submitNOOP}
-          value={simcDataInput}
-          onChange={simcInputChanged}
-          placeholder="paste simc data here"
-        />
-      </div>
+        className="w-full text-gray-400 bg-gray-800 border-gray-700 border-solid border-2 p-0 pl-1 m-0"
+        onSubmit={submitNOOP}
+        value={simcDataInput}
+        onChange={simcInputChanged}
+        placeholder="paste simc data here"
+      />
       {data && (
         <div style={{ marginTop: 12 }}>
           {data.profile.name}, {data.profile.race.name.toLocaleLowerCase()}{" "}
@@ -165,10 +148,12 @@ export function DiffPage() {
         </div>
       )}
       {missingEnchants.map((a) => (
-        <Heading2 key={a}>Slot missing enchantment: {a}</Heading2>
+        <div className="ml-2 text-xl text-red-500" key={a}>
+          Slot missing enchantment: {a}
+        </div>
       ))}
       {missingUpgrades.map((a) => (
-        <div className="ml-2 text-lg text-red-400" key={a}>
+        <div className="ml-2 text-xl text-red-500" key={a}>
           {a}
         </div>
       ))}

@@ -26,18 +26,9 @@ function Layout() {
         color: theme.Default.color,
       }}
     >
-      <div
-        style={{
-          marginLeft: -12,
-          marginTop: -12,
-          color: theme.Title.color,
-          fontSize: "1.1em",
-          fontWeight: "lighter",
-        }}
-      >
+      <div className="text-gray-500 text-lg -ml-2 -mt-3">
         ~/wow/stats/data/vis
       </div>
-      <div className="text-3xl font-bold underline">test text</div>
       <main style={{ flexGrow: 1 }}>
         <Outlet />
       </main>

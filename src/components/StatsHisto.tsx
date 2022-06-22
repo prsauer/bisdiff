@@ -91,11 +91,12 @@ export function StatsHisto(props: {
             return (
               <>
                 <div
+                  className="pl-1"
                   key={i.name}
                   style={{
-                    paddingLeft: 4,
                     flex: `${(100 * i.stat.value) / total}`,
                     backgroundColor: colors[idx],
+                    minWidth: 40,
                   }}
                 >
                   {i.name[0]} {pct}%

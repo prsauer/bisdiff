@@ -8,5 +8,4 @@ export const PageContainer = styled.div`
   background-color: ${(props) => props.theme.PageContainer.backgroundColor};
   color: ${(props) => props.theme.PageContainer.color};
   margin-top: 8px;
-  padding-bottom: 100px;
 `;
